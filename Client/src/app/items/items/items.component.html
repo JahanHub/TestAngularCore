@@ -1,0 +1,46 @@
+<form [formGroup]="frmItem">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="itemCode">Item Code</label>
+        <input type="text" class="form-control" id="itemCode" formControlName="ItemCode" placeholder="Item Code">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="itemName">Item Name</label>
+        <input type="text" class="form-control" id="itemName" formControlName="ItemName" placeholder="Item Name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="purchasePrice">Purchase Price</label>
+      <input type="text" class="form-control" id="purchasePrice" formControlName="PurchasePrice" placeholder="Purchase Price">
+    </div>
+    <div class="form-group">
+      <label for="salesPrice">Sales Price</label>
+      <input type="text" class="form-control" id="salesPrice" formControlName="SalesPrice" placeholder="Sales Price">
+    </div>
+
+    <button (click)="save()" class="btn btn-primary">Save</button>
+    <button (click)="clear()" class="btn btn-primary">Clear</button>
+  
+    <br>
+    <br>
+  
+    <kendo-grid [data]="gridData">
+      <kendo-grid-column field="ItemCode" title="Item Code">
+      </kendo-grid-column>
+      <kendo-grid-column field="ItemName" title="Item Name">
+      </kendo-grid-column>
+      <kendo-grid-column field="PurchasePrice" title="Purchase Price">
+      </kendo-grid-column>
+      <kendo-grid-column field="SalesPrice" title="Sales Price">
+      </kendo-grid-column>
+      <kendo-grid-column title="Action">
+        <ng-template kendoGridCellTemplate let-dataItem="dataItem" let-rowIndex="rowIndex">
+          <button class="btn btn-primary" (click)="onRowEdit(dataItem)">Edit</button>
+          <button class="btn btn-danger" (click)="onRowDelete(dataItem)">Delete</button>
+        </ng-template>
+      </kendo-grid-column>
+    </kendo-grid>
+  
+  </form>
+  
+  

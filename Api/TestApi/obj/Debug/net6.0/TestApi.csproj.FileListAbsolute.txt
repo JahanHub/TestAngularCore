@@ -1,0 +1,789 @@
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\appsettings.Development.json
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\appsettings.json
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\TestApi.exe
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\TestApi.deps.json
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\TestApi.runtimeconfig.json
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\TestApi.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\TestApi.pdb
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Humanizer.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Practice\TestApi\TestApi\obj\Debug\net6.0\TestApi.csproj.AssemblyReference.cache
+D:\Practice\TestApi\TestApi\obj\Debug\net6.0\TestApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\Practice\TestApi\TestApi\obj\Debug\net6.0\TestApi.AssemblyInfoInputs.cache
+D:\Practice\TestApi\TestApi\obj\Debug\net6.0\TestApi.AssemblyInfo.cs
+D:\Practice\TestApi\TestApi\obj\Debug\net6.0\TestApi.csproj.CoreCompileInputs.cache
+D:\Practice\TestApi\TestApi\obj\Debug\net6.0\TestApi.MvcApplicationPartsAssemblyInfo.cs
+D:\Practice\TestApi\TestApi\obj\Debug\net6.0\TestApi.MvcApplicationPartsAssemblyInfo.cache
+D:\Practice\TestApi\TestApi\obj\Debug\net6.0\staticwebassets.build.json
+D:\Practice\TestApi\TestApi\obj\Debug\net6.0\staticwebassets.development.json
+D:\Practice\TestApi\TestApi\obj\Debug\net6.0\scopedcss\bundle\TestApi.styles.css
+D:\Practice\TestApi\TestApi\obj\Debug\net6.0\TestApi.csproj.CopyComplete
+D:\Practice\TestApi\TestApi\obj\Debug\net6.0\TestApi.dll
+D:\Practice\TestApi\TestApi\obj\Debug\net6.0\refint\TestApi.dll
+D:\Practice\TestApi\TestApi\obj\Debug\net6.0\TestApi.pdb
+D:\Practice\TestApi\TestApi\obj\Debug\net6.0\TestApi.genruntimeconfig.cache
+D:\Practice\TestApi\TestApi\obj\Debug\net6.0\ref\TestApi.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\MessagePack.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\MessagePack.Annotations.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.Build.Locator.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.Features.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.Features.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.Razor.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.Scripting.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.VisualBasic.Features.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.VisualBasic.Workspaces.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.DiaSymReader.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.DotNet.Scaffolding.Shared.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.VisualStudio.Debugger.Contracts.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\dotnet-aspnet-codegenerator-design.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\NuGet.Common.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\NuGet.Configuration.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\NuGet.DependencyResolver.Core.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\NuGet.Frameworks.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\NuGet.LibraryModel.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\NuGet.Packaging.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\NuGet.ProjectModel.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\NuGet.Protocol.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\NuGet.Versioning.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\System.Composition.AttributedModel.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\System.Composition.Convention.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\System.Composition.Hosting.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\System.Composition.Runtime.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\System.Composition.TypedParts.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\runtimes\win-arm\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
+D:\Practice\TestApi\TestApi\bin\Debug\net6.0\runtimes\win-arm64\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\appsettings.Development.json
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\appsettings.json
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\TestApi.exe
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\TestApi.deps.json
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\TestApi.runtimeconfig.json
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\TestApi.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\TestApi.pdb
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Humanizer.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\MessagePack.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\MessagePack.Annotations.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.Build.Locator.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.Features.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.Features.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.Razor.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.Scripting.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.VisualBasic.Features.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.VisualBasic.Workspaces.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.DiaSymReader.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.DotNet.Scaffolding.Shared.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.VisualStudio.Debugger.Contracts.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\dotnet-aspnet-codegenerator-design.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\NuGet.Common.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\NuGet.Configuration.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\NuGet.DependencyResolver.Core.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\NuGet.Frameworks.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\NuGet.LibraryModel.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\NuGet.Packaging.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\NuGet.ProjectModel.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\NuGet.Protocol.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\NuGet.Versioning.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\System.Composition.AttributedModel.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\System.Composition.Convention.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\System.Composition.Hosting.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\System.Composition.Runtime.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\System.Composition.TypedParts.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\win-arm\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\win-arm64\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\obj\Debug\net6.0\TestApi.csproj.AssemblyReference.cache
+D:\CrudApplication\CrudApplication\Api\TestApi\obj\Debug\net6.0\TestApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\CrudApplication\CrudApplication\Api\TestApi\obj\Debug\net6.0\TestApi.AssemblyInfoInputs.cache
+D:\CrudApplication\CrudApplication\Api\TestApi\obj\Debug\net6.0\TestApi.AssemblyInfo.cs
+D:\CrudApplication\CrudApplication\Api\TestApi\obj\Debug\net6.0\TestApi.csproj.CoreCompileInputs.cache
+D:\CrudApplication\CrudApplication\Api\TestApi\obj\Debug\net6.0\TestApi.MvcApplicationPartsAssemblyInfo.cs
+D:\CrudApplication\CrudApplication\Api\TestApi\obj\Debug\net6.0\TestApi.MvcApplicationPartsAssemblyInfo.cache
+D:\CrudApplication\CrudApplication\Api\TestApi\obj\Debug\net6.0\staticwebassets.build.json
+D:\CrudApplication\CrudApplication\Api\TestApi\obj\Debug\net6.0\staticwebassets.development.json
+D:\CrudApplication\CrudApplication\Api\TestApi\obj\Debug\net6.0\scopedcss\bundle\TestApi.styles.css
+D:\CrudApplication\CrudApplication\Api\TestApi\obj\Debug\net6.0\TestApi.csproj.CopyComplete
+D:\CrudApplication\CrudApplication\Api\TestApi\obj\Debug\net6.0\TestApi.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\obj\Debug\net6.0\refint\TestApi.dll
+D:\CrudApplication\CrudApplication\Api\TestApi\obj\Debug\net6.0\TestApi.pdb
+D:\CrudApplication\CrudApplication\Api\TestApi\obj\Debug\net6.0\TestApi.genruntimeconfig.cache
+D:\CrudApplication\CrudApplication\Api\TestApi\obj\Debug\net6.0\ref\TestApi.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\appsettings.Development.json
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\appsettings.json
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\TestApi.exe
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\TestApi.deps.json
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\TestApi.runtimeconfig.json
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\TestApi.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\TestApi.pdb
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Humanizer.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\MessagePack.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\MessagePack.Annotations.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.Build.Locator.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.Features.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.Features.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.Razor.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.Scripting.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.VisualBasic.Features.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.VisualBasic.Workspaces.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.Workspaces.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.DiaSymReader.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.DotNet.Scaffolding.Shared.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.OpenApi.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.VisualStudio.Debugger.Contracts.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\dotnet-aspnet-codegenerator-design.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\NuGet.Common.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\NuGet.Configuration.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\NuGet.DependencyResolver.Core.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\NuGet.Frameworks.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\NuGet.LibraryModel.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\NuGet.Packaging.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\NuGet.ProjectModel.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\NuGet.Protocol.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\NuGet.Versioning.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\System.Composition.AttributedModel.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\System.Composition.Convention.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\System.Composition.Hosting.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\System.Composition.Runtime.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\System.Composition.TypedParts.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\System.Drawing.Common.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\System.Runtime.Caching.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\System.Security.Permissions.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\System.Windows.Extensions.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\win-arm\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\win-arm64\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\obj\Debug\net6.0\TestApi.csproj.AssemblyReference.cache
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\obj\Debug\net6.0\TestApi.GeneratedMSBuildEditorConfig.editorconfig
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\obj\Debug\net6.0\TestApi.AssemblyInfoInputs.cache
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\obj\Debug\net6.0\TestApi.AssemblyInfo.cs
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\obj\Debug\net6.0\TestApi.csproj.CoreCompileInputs.cache
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\obj\Debug\net6.0\TestApi.MvcApplicationPartsAssemblyInfo.cs
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\obj\Debug\net6.0\TestApi.MvcApplicationPartsAssemblyInfo.cache
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\obj\Debug\net6.0\staticwebassets.build.json
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\obj\Debug\net6.0\staticwebassets.development.json
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\obj\Debug\net6.0\scopedcss\bundle\TestApi.styles.css
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\obj\Debug\net6.0\TestApi.csproj.CopyComplete
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\obj\Debug\net6.0\TestApi.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\obj\Debug\net6.0\refint\TestApi.dll
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\obj\Debug\net6.0\TestApi.pdb
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\obj\Debug\net6.0\TestApi.genruntimeconfig.cache
+E:\Pets\CrudApplication V2\CrudApplication\Api\TestApi\obj\Debug\net6.0\ref\TestApi.dll
