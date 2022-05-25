@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AddEvent, CancelEvent, EditEvent, GridComponent, RemoveEvent, SaveEvent } from '@progress/kendo-angular-grid';
 import { DatePipe, formatDate } from '@angular/common';
+import { forkJoin } from 'rxjs';
+import { ListBarProperties } from 'src/app/core/models/list-bar.model';
 
 @Component({
   selector: 'app-purchase',
@@ -12,20 +14,32 @@ import { DatePipe, formatDate } from '@angular/common';
 export class PurchaseComponent implements OnInit {
 
   private datepipe: DatePipe;
-  public frmPurchase : FormGroup;
+  public frmPurchase: FormGroup;
   public formGroup: FormGroup;
   public grid: GridComponent;
-  public gridData: any[] =[];
+  public gridData: any[] = [];
   private cd: Date = new Date();
   public isGridEditMode = false;
   editedRowIndex: any;
+  public itemDropdownData: any[] = [];
+  public supplierDropdownData: any[] = [];
+  public purchaseList: any[] = [];
+  public listProperties: ListBarProperties = new ListBarProperties();
 
-  constructor(private fb:FormBuilder,private httpClient: HttpClient) { }
+  constructor(private fb: FormBuilder, private httpClient: HttpClient) { }
 
   ngOnInit(): void {
-    this.createFrmPurchase();
+    this.initiateListbarProperties()
     this.createFrmPurchase();
     this.loadGridDataSource();
+    this.loadDropdowns();
+    this.loadPurchaseList();
+  }
+
+  initiateListbarProperties(){
+    this.listProperties = new ListBarProperties();
+    this.listProperties.Header='ItemCode';
+    this.listProperties.Others = ['ItemName','PurchasePrice']
   }
 
   public loadGridDataSource(purchaseDetailInfo: any = []) {
@@ -35,29 +49,26 @@ export class PurchaseComponent implements OnInit {
     this.gridData = purchaseDetailInfo;
   }
 
-  createFrmPurchase(){
+  createFrmPurchase() {
     this.frmPurchase = this.fb.group({
       Id: new FormControl(0),
+      PurId: new FormControl(1),
       PurDate: new FormControl(''),
       SupplierId: new FormControl(''),
       PurchaseDetails: this.fb.array([])
     });
   }
 
-
-
-  getPurchaseDetailsForm(){
+  getPurchaseDetailsForm() {
     return this.frmPurchase.get('PurchaseDetails') as FormArray;
   }
 
-
-  save(){
+  save() {
     const purchase = this.frmPurchase.getRawValue();
     purchase.PurchaseDetails = this.gridData;
-    console.log(purchase);
-    if(purchase.Id && purchase.Id > 0){
-      this.httpClient.put('http://localhost:5138/api/Purchase/'+purchase.Id ,purchase).subscribe(
-        (res)=>{
+    if (purchase.Id && purchase.Id > 0) {
+      this.httpClient.put('http://localhost:5138/api/Purchase/' + purchase.Id, purchase).subscribe(
+        (res) => {
           this.clear();
         },
         (err) => {
@@ -68,8 +79,8 @@ export class PurchaseComponent implements OnInit {
         }
       );
     } else {
-      this.httpClient.post('http://localhost:5138/api/Purchase',purchase).subscribe(
-        (res)=>{
+      this.httpClient.post('http://localhost:5138/api/Purchase', purchase).subscribe(
+        (res) => {
           console.log(res);
           this.clear();
         },
@@ -84,9 +95,9 @@ export class PurchaseComponent implements OnInit {
 
   }
 
-  getPurchase(){
+  getPurchase() {
     this.httpClient.get('http://localhost:5138/api/Purchase').subscribe(
-      (res)=>{
+      (res) => {
         // this.gridData = res as any[];
         console.log(res);
       },
@@ -105,11 +116,8 @@ export class PurchaseComponent implements OnInit {
       ItemCode: new FormControl(dataItem.ItemCode, Validators.required),
       ItemName: new FormControl(dataItem.ItemName, Validators.required),
       PurchasePrice: new FormControl(dataItem.PurchasePrice)
-  });
+    });
   }
-
-
-
 
   clear() {
     this.createFrmPurchase();
@@ -149,11 +157,11 @@ export class PurchaseComponent implements OnInit {
     this.gridData = this.gridData;
   }
 
-  public removeHandler({ dataItem , rowIndex}: RemoveEvent): void {
+  public removeHandler({ dataItem, rowIndex }: RemoveEvent): void {
     console.log(dataItem);
-    if(confirm('Are You Sure?')){
+    if (confirm('Are You Sure?')) {
       // const rowIndex = this.gridData.findIndex(dataItem);
-      this.gridData.splice(rowIndex,1);
+      this.gridData.splice(rowIndex, 1);
       this.gridData = this.gridData;
     }
 
@@ -168,9 +176,9 @@ export class PurchaseComponent implements OnInit {
     this.formGroup = undefined;
   }
 
-  getSupplier(){
+  getSupplier() {
     this.httpClient.get('http://localhost:5138/api/common/supplierdropdown').subscribe(
-      (res)=>{
+      (res) => {
         // this.gridData = res as any[];
         console.log(res);
       },
@@ -183,4 +191,59 @@ export class PurchaseComponent implements OnInit {
     )
   }
 
+  loadDropdowns() {
+    forkJoin([this.loadSuppliers(), this.loadItems()]).subscribe(
+      ([res1, res2]) => {
+        this.supplierDropdownData = res1[`Data`];
+        this.itemDropdownData = res2 as any[];
+      },
+      (err) => {
+
+      }
+    )
+  }
+
+  loadSuppliers() {
+    return this.httpClient.get('http://localhost:5138/api/common/supliers');
+  }
+
+  loadItems() {
+    return this.httpClient.get('http://localhost:5138/api/items');
+  }
+
+  onItemDropDownChange(e){
+    this.formGroup.patchValue({
+      ItemName: e.ItemName,
+      PurchasePrice: e.PurchasePrice,
+      ItemCode: e.ItemCode,
+    });
+  }
+
+//   private loadPurchase(): void {
+//     this.baseDataService
+//       .callServer(
+//         'GET',
+//         'http://localhost:5138/api/Purchase'
+//       )
+//       .subscribe((res) => {
+//         // tslint:disable-next-line: no-string-literal
+
+//         this.pur = res[`data`];
+//       });
+
+// }
+loadPurchaseList() {
+  return this.httpClient.get('http://localhost:5138/api/items').subscribe(
+    (res)=>{
+      this.purchaseList = res as any[];
+      console.log(this.purchaseList);
+    },
+    (err)=>{
+      
+    },
+    ()=>{
+
+    }
+  )
+}
 }

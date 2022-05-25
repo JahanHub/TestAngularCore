@@ -7,8 +7,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GridModule } from '@progress/kendo-angular-grid';
 import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
 import { PurchaseComponent } from './purchase/purchase.component';
-
-
+import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+import { CoreModule } from '../core/core.module';
 @NgModule({
   declarations: [PurchaseComponent],
   imports: [
@@ -18,7 +18,9 @@ import { PurchaseComponent } from './purchase/purchase.component';
     ReactiveFormsModule,
     HttpClientModule,
     GridModule,
-    DateInputsModule
+    DateInputsModule,
+    DropDownsModule,
+    CoreModule
   ]
 })
 export class PurchaseModule { }

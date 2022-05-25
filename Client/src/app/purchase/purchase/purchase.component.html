@@ -1,78 +1,129 @@
-<form [formGroup]="frmPurchase">
-    <div class="form-row">
-      <!-- <div class="form-group col-md-6">
-        <label for="PurId">Purchase ID</label>
-        <input type="text" class="form-control" id="PurId" formControlName="PurId" placeholder="Purchase ID">
-      </div> -->
-      <div class="form-group col-md-6">
-        <label for="PurDate">Purchase Date</label>
-        <kendo-datepicker [format]="'yyyy-MM-dd'" id="PurDate" name="PurDate" formControlName="PurDate">
-        </kendo-datepicker>
+<div class="row">
+  <div class="col-md-4">
+    <list-bar [itemList]="purchaseList" [properties]="listProperties"></list-bar>
+  </div>
+
+  <div class="col-md-8">
+    <form [formGroup]="frmPurchase">
+      <div class="form-row">
+
+        <div class="form-group col-md-6">
+          <label for="PurDate">Purchase Date</label>
+          <kendo-datepicker
+            [format]="'yyyy-MM-dd'"
+            id="PurDate"
+            name="PurDate"
+            formControlName="PurDate">
+          </kendo-datepicker>
+        </div>
+    
+        <div class="form-group col-md-6">
+          <label for="SupplierId">Supplier</label>
+          <kendo-dropdownlist
+            [data]="supplierDropdownData"
+            [valuePrimitive]="true"
+            textField="Text"
+            valueField="Value"
+            formControlName="SupplierId">
+          </kendo-dropdownlist>
+        </div>
+
       </div>
+    
+      <button (click)="save()" class="btn btn-primary">Save</button>
+      <button (click)="clear()" class="btn btn-primary">Clear</button>
+    
+      <br />
+      <br />
+    
+      <kendo-grid
+        [data]="gridData"
+        (edit)="editHandler($event)"
+        (cancel)="cancelHandler($event)"
+        (save)="saveHandler($event)"
+        (remove)="removeHandler($event)"
+        (add)="addHandler($event)">
 
-      <!-- <div class="form-group">
-        <label class="col-form-label" for="transactionDate">{{ 'lbl_batch_creation_date' |
-          translate}}</label>
-        <kendo-datepicker [format]="'yyyy-MM-dd'" class="form-control text-box single-line"
-          id="transactionDate" name="transactionDate" formControlName="transactionDate">
-        </kendo-datepicker>
-      </div> -->
-      <div class="form-group col-md-6">
-        <label for="SupplierId">Supplier</label>
-        <input type="text" class="form-control" id="SupplierId" formControlName="SupplierId" placeholder="Supplier">
-      </div>
+        <ng-template kendoGridToolbarTemplate>
+          <button kendoGridAddCommand>Add new</button>
+        </ng-template>
 
-    </div>
+        <kendo-grid-column field="Id" [hidden]="true">
+          <ng-template
+            kendoGridEditTemplate
+            let-dataItem="dataItem"
+            let-rowIndex="rowIndex">
+            <input type="text"
+              class="form-control"
+              [formControl]="formGroup.get('Id')"/>
+          </ng-template>
+        </kendo-grid-column>
+    
+        <kendo-grid-column field="ItemCode" title="Item Code">
+          <ng-template
+            kendoGridCellTemplate
+            let-dataItem="dataItem"
+            let-rowIndex="rowIndex">
+            <span>{{ dataItem.ItemCode }}</span>
+          </ng-template>
 
+          <ng-template
+            kendoGridEditTemplate
+            let-dataItem="dataItem"
+            let-rowIndex="rowIndex">
 
-    <button (click)="save()" class="btn btn-primary">Save</button>
-    <button (click)="clear()" class="btn btn-primary">Clear</button>
+          <kendo-dropdownlist
+            [data]="itemDropdownData"
+            textField="ItemCode"
+            valueField="ItemCode"
+            (valueChange)="onItemDropDownChange($event, rowIndex)">
 
-    <br>
-    <br>
+          </kendo-dropdownlist>
+          </ng-template>
+        </kendo-grid-column>
+    
+        <kendo-grid-column field="ItemName" title="Item Name">
 
-    <kendo-grid [data]="gridData"
-              (edit)="editHandler($event)"
-              (cancel)="cancelHandler($event)"
-              (save)="saveHandler($event)"
-              (remove)="removeHandler($event)"
-              (add)="addHandler($event)" >
+          <ng-template
+            kendoGridCellTemplate
+            let-dataItem="dataItem"
+            let-rowIndex="rowIndex">
+            <span>{{ dataItem.ItemName }}</span>
+          </ng-template>
 
-      <ng-template kendoGridToolbarTemplate>
-        <button kendoGridAddCommand >
-          Add new
-        </button>
-      </ng-template>
-      <kendo-grid-column field="Id" [hidden]="true">
-        <ng-template kendoGridEditTemplate let-dataItem="dataItem" let-rowIndex="rowIndex">
-          <input type="text" class="form-control" [formControl]="formGroup.get('Id')" >
-        </ng-template>
-      </kendo-grid-column>
-      <kendo-grid-column field="ItemCode" title="Item Code">
-        <ng-template kendoGridCellTemplate let-dataItem="dataItem" let-rowIndex="rowIndex">
-          <span>{{dataItem.ItemCode}}</span>
-        </ng-template>
-        <ng-template kendoGridEditTemplate let-dataItem="dataItem" let-rowIndex="rowIndex">
-          <input type="text" class="form-control" [formControl]="formGroup.get('ItemCode')" placeholder="ItemCode">
-        </ng-template>
-      </kendo-grid-column>
-      <kendo-grid-column field="ItemName" title="Item Name">
-        <ng-template kendoGridCellTemplate let-dataItem="dataItem" let-rowIndex="rowIndex">
-          <span>{{dataItem.ItemName}}</span>
-        </ng-template>
-        <ng-template kendoGridEditTemplate let-dataItem="dataItem" let-rowIndex="rowIndex">
-          <input type="text" class="form-control" [formControl]="formGroup.get('ItemName')" placeholder="ItemName">
-        </ng-template>
-      </kendo-grid-column>
-      <kendo-grid-column field="PurchasePrice" title="Purchase Price">
-        <ng-template kendoGridCellTemplate let-dataItem="dataItem" let-rowIndex="rowIndex">
-          <span>{{dataItem.PurchasePrice}}</span>
-        </ng-template>
-        <ng-template kendoGridEditTemplate let-dataItem="dataItem" let-rowIndex="rowIndex">
-          <input type="text" class="form-control" [formControl]="formGroup.get('PurchasePrice')" placeholder="Purchase Price">
-        </ng-template>
-      </kendo-grid-column>
-      <kendo-grid-command-column title="Action" [width]="220">
+          <ng-template
+            kendoGridEditTemplate
+            let-dataItem="dataItem"
+            let-rowIndex="rowIndex">
+            <input
+              type="text"
+              class="form-control"
+              [formControl]="formGroup.get('ItemName')"
+              placeholder="ItemName"/>
+          </ng-template>
+
+        </kendo-grid-column>
+
+        <kendo-grid-column field="PurchasePrice" title="Purchase Price">    
+          <ng-template
+            kendoGridCellTemplate
+            let-dataItem="dataItem"
+            let-rowIndex="rowIndex">
+            <span>{{ dataItem.PurchasePrice }}</span>
+          </ng-template>
+          <ng-template
+            kendoGridEditTemplate
+            let-dataItem="dataItem"
+            let-rowIndex="rowIndex">
+            <input
+              type="text"
+              class="form-control"
+              [formControl]="formGroup.get('PurchasePrice')"
+              placeholder="Purchase Price"/>
+          </ng-template>
+        </kendo-grid-column>
+
+        <kendo-grid-command-column title="Action" [width]="220">
           <ng-template kendoGridCellTemplate let-isNew="isNew">
             <button kendoGridEditCommand [primary]="true">Edit</button>
             <button kendoGridRemoveCommand>Remove</button>
@@ -83,8 +134,10 @@
               {{ isNew ? "Discard changes" : "Cancel" }}
             </button>
           </ng-template>
-      </kendo-grid-command-column>
-    </kendo-grid>
+        </kendo-grid-command-column>
 
-  </form>
+      </kendo-grid>
+    </form> 
+  </div>
+</div>
 

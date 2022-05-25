@@ -3,7 +3,7 @@ using TestApi.Contexts;
 
 namespace TestApi.Common
 {
-    public class CommonApi
+    public class CommonApi : ICommonApi
     {
         private readonly AppDbContext _context;
 
@@ -41,7 +41,7 @@ namespace TestApi.Common
                 .AsNoTracking()
                 .Select(i => new DropDown()
                 {
-                    Text = i.ItemName,
+                    Text = i.ItemCode,
                     Value = i.Id
                 })
                 .ToListAsync(cancellationToken);

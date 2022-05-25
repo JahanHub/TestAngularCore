@@ -7,7 +7,6 @@ const routes: Routes = [
   { path: '', component: OrdersComponent },
   { path: 'order-tracking', component: OrderTrackingComponent },
 ];
-
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],

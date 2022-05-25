@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { GridComponent } from '@progress/kendo-angular-grid';
-
 @Component({
   selector: 'app-suppliers',
   templateUrl: './suppliers.component.html'
@@ -10,7 +9,6 @@ import { GridComponent } from '@progress/kendo-angular-grid';
 export class SuppliersComponent implements OnInit {
 
   public frmSupplier : FormGroup;
-
   public supplierList: any[];
   public clearButtonText: string = "Clear";
   public grid: GridComponent;
@@ -36,6 +34,7 @@ export class SuppliersComponent implements OnInit {
       Zip: new FormControl(''),
     });
   }
+
   save(){
     const supplier = this.frmSupplier.getRawValue();
     console.log(supplier);
@@ -65,7 +64,6 @@ export class SuppliersComponent implements OnInit {
         }
       );
     }
-
   }
 
   getSupplier(){
@@ -94,7 +92,6 @@ export class SuppliersComponent implements OnInit {
       Zip: supplier.Zip,
     })
   }
-
 
   onRowDelete(supplier: any){
     if(confirm('Are You Sure?')){

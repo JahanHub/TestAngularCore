@@ -5,7 +5,6 @@ import { SuppliersComponent } from './suppliers/suppliers.component';
 const routes: Routes = [
   { path: '', component: SuppliersComponent },
 ];
-
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],

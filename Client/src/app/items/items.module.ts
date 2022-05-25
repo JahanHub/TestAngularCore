@@ -7,7 +7,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GridModule } from '@progress/kendo-angular-grid';
 import { ItemsComponent } from './items/items.component';
 
-
 @NgModule({
   declarations: [ItemsComponent],
   imports: [
@@ -16,8 +15,8 @@ import { ItemsComponent } from './items/items.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    GridModule,
+    GridModule
   ]
 })
-export class itemsModule { }
+export class ItemsModule { }
 

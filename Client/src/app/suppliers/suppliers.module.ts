@@ -6,8 +6,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GridModule } from '@progress/kendo-angular-grid';
 import { SuppliersComponent } from './suppliers/suppliers.component';
 import { SuppliersRoutingModule } from './suppliers-routing.module';
-
-
 @NgModule({
   declarations: [SuppliersComponent],
   imports: [
@@ -20,4 +18,3 @@ import { SuppliersRoutingModule } from './suppliers-routing.module';
   ]
 })
 export class SuppliersModule { }
-
