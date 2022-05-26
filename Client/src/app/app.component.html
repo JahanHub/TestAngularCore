@@ -1,11 +1,18 @@
 <app-header></app-header>
 
-<div class="row">
-<div class="col-4">
-    <app-sidenav></app-sidenav>
-</div>
-<div class="col-8">
-    <router-outlet></router-outlet>
-</div>
-</div>
+<!-- <button (click)="isCollapsed = !isCollapsed" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main" aria-controls="navbar-main" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span> Collapse
+</button>
 
+<div class="collapse navbar-collapse" id="navbarTogglerDemo02" [ngbCollapse]="isCollapsed"> -->
+
+    <div class="row">
+    <div class="col-2">
+        <app-sidenav></app-sidenav>
+    </div>
+    <div class="col-8">
+        <router-outlet></router-outlet>
+    </div>
+    </div>
+
+<!-- </div> -->

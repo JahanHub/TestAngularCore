@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { GridComponent } from '@progress/kendo-angular-grid';
+import { CompositeFilterDescriptor, filterBy } from '@progress/kendo-data-query';
 import { demoData } from './data/data';
 
 @Component({
@@ -17,15 +18,18 @@ export class CustomersComponent implements OnInit {
   public clearButtonText: string = "Clear";
   public grid: GridComponent;
   public gridData: any[] =[];
+  public originalData: any[] = [];
   public gridDemoData: any[] =[];
   public elPropertyName:string[]=[];
+  public customerDataSource: any[] = [];
+  public filter: CompositeFilterDescriptor;
 
   constructor(private fb:FormBuilder,private httpClient: HttpClient) { }
 
   ngOnInit(): void {
     this.clear();
-    this.gridDemoData = demoData;
-    this.elPropertyName = this.getPropertyNameArray(this.gridDemoData);
+    //this.gridDemoData = demoData;
+    //this.elPropertyName = this.getPropertyNameArray(this.gridDemoData);
   }
 
   createFrmCustomer(){
@@ -130,6 +134,39 @@ export class CustomersComponent implements OnInit {
     }
     return returnObj;
   }
+
+  private loadItems(): void {
+    if (
+      this.customerDataSource &&
+      this.customerDataSource !== null &&
+      this.customerDataSource !== undefined &&
+      this.customerDataSource.length > 0
+    ) {
+      this.gridData = this.customerDataSource;
+    } else {
+      this.gridData = null;
+    }
+  }
+  public filterChange(filterItem: CompositeFilterDescriptor): void {
+    this.filter = filterItem;
+    if (
+      this.originalData &&
+      this.originalData !== null &&
+      this.originalData !== undefined &&
+      this.originalData.length > 0
+    ) {
+      this.customerDataSource = this.originalData;
+      this.customerDataSource = filterBy(
+        this.customerDataSource,
+        this.filter
+      );
+      this.loadItems();
+    }
+  }
+
+
+
+
 }
 
 

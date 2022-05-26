@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ListBarProperties } from '../../models/list-bar.model';
 
 @Component({
@@ -10,10 +10,13 @@ export class ListbarComponent implements OnInit {
   @Input() itemList: any[];
   @Input() properties: ListBarProperties;
 
+  @Output() select = new EventEmitter<any>();
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
   getOthersValue(item){
     let output: string = '';
     for (let index = 0; index < this.properties.Others.length; index++) {
@@ -21,5 +24,10 @@ export class ListbarComponent implements OnInit {
     }
     output = output.substring(0,output.length - 3);
     return output;
+  }
+
+  onItemSelected(item){
+    this.select.emit(item);
+    //console.log('onItemSelected',item);
   }
 }

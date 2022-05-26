@@ -15,6 +15,8 @@ namespace TestApi.Contexts
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<Purchase> Purchases { get; set; }
         public DbSet<PurchaseDetails> PurchaseDetails { get; set; }
+        public DbSet<Sale> Sales { get; set; }
+        public DbSet<SaleDetails> SalesDetails { get; set; }
 
 
 

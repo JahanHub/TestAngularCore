@@ -1,30 +1,31 @@
 <div class="row">
   <div class="col-md-4">
-    <list-bar [itemList]="purchaseList" [properties]="listProperties" (select)="itemSelected($event)" ></list-bar>
+    <list-bar [itemList]="salesList" [properties]="listProperties" (select)="itemSelected($event)" ></list-bar>
   </div>
 
   <div class="col-md-8">
-    <form [formGroup]="frmPurchase">
+    <form [formGroup]="frmSales">
       <div class="form-row">
 
         <div class="form-group col-md-6">
-          <label for="PurDate">Purchase Date</label>
+          <label for="SalesDate">Sales Date</label>
           <kendo-datepicker
-            [format]="'yyyy-MM-dd'"
-            id="PurDate"
-            name="PurDate"
-            formControlName="PurDate">
+            format="yyyy-MM-dd"
+            id="SalesDate"
+            name="SalesDate"
+            formControlName="SalesDate">
           </kendo-datepicker>
         </div>
     
         <div class="form-group col-md-6">
-          <label for="SupplierId">Supplier</label>
+          <label for="CustomerId">Customer</label>
           <kendo-dropdownlist
-            [data]="supplierDropdownData"
+            [data]="customerDropdownData"
             [valuePrimitive]="true"
             textField="Text"
             valueField="Value"
-            formControlName="SupplierId">
+            [defaultItem]="{Text:'Select One',Value:'0'}"
+            formControlName="CustomerId">
           </kendo-dropdownlist>
         </div>
 
@@ -63,7 +64,8 @@
           <ng-template
             kendoGridCellTemplate
             let-dataItem="dataItem"
-            let-rowIndex="rowIndex">
+            let-rowIndex="rowIndex"
+            >
             <span>{{ dataItem.ItemCode }}</span>
           </ng-template>
 
@@ -76,6 +78,8 @@
             [data]="itemDropdownData"
             textField="ItemCode"
             valueField="ItemCode"
+            [formControl]="formGroup.get('ItemCode')"
+            [valuePrimitive]="true"
             (valueChange)="onItemDropDownChange($event, rowIndex)">
 
           </kendo-dropdownlist>
@@ -104,12 +108,12 @@
 
         </kendo-grid-column>
 
-        <kendo-grid-column field="PurchasePrice" title="Purchase Price">    
+        <kendo-grid-column field="SalesPrice" title="Sales Price">    
           <ng-template
             kendoGridCellTemplate
             let-dataItem="dataItem"
             let-rowIndex="rowIndex">
-            <span>{{ dataItem.PurchasePrice }}</span>
+            <span>{{ dataItem.SalesPrice }}</span>
           </ng-template>
           <ng-template
             kendoGridEditTemplate
@@ -118,8 +122,27 @@
             <input
               type="text"
               class="form-control"
-              [formControl]="formGroup.get('PurchasePrice')"
-              placeholder="Purchase Price"/>
+              [formControl]="formGroup.get('SalesPrice')"
+              placeholder="Sales Price"/>
+          </ng-template>
+        </kendo-grid-column>
+      
+        <kendo-grid-column field="Qty" title="Qty">    
+          <ng-template
+            kendoGridCellTemplate
+            let-dataItem="dataItem"
+            let-rowIndex="rowIndex">
+            <span>{{ dataItem.Qty }}</span>
+          </ng-template>
+          <ng-template
+            kendoGridEditTemplate
+            let-dataItem="dataItem"
+            let-rowIndex="rowIndex">
+            <input
+              type="text"
+              class="form-control"
+              [formControl]="formGroup.get('Qty')"
+              placeholder="Qty"/>
           </ng-template>
         </kendo-grid-column>
 

@@ -6,4 +6,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-routing';
+
+//   isCollapsed: boolean;
+//   ngbCollapse: any;
+
+
+//   togglePanel(collapseButton: HTMLElement, collapsePanel: HTMLElement) {
+//     if (this.ngbCollapse) {
+//       collapseButton.classList.add('collapsed');
+//       collapsePanel.classList.remove('show');
+//     } else {
+//       collapsePanel.classList.add('show');
+//       collapseButton.classList.remove('collapsed');
+//     }
+//     this.ngbCollapse = !this.isCollapsed
+    
+// }
+
 }

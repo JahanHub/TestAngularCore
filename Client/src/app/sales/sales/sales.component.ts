@@ -7,14 +7,14 @@ import { forkJoin } from 'rxjs';
 import { ListBarProperties } from 'src/app/core/models/list-bar.model';
 
 @Component({
-  selector: 'app-purchase',
-  templateUrl: './purchase.component.html',
-  //styleUrls: ['./purchase.component.css']
+  selector: 'app-sales',
+  templateUrl: './sales.component.html',
+  //styleUrls: ['./sales.component.css']
 })
-export class PurchaseComponent implements OnInit {
+export class SalesComponent implements OnInit {
 
   private datepipe: DatePipe;
-  public frmPurchase: FormGroup;
+  public frmSales: FormGroup;
   public formGroup: FormGroup;
   public grid: GridComponent;
   public gridData: any[] = [];
@@ -22,10 +22,11 @@ export class PurchaseComponent implements OnInit {
   public isGridEditMode = false;
   editedRowIndex: any;
   public itemDropdownData: any[] = [];
-  public supplierDropdownData: any[] = [];
-  public purchaseList: any[] = [];
+  public customerDropdownData: any[] = [];
+  public salesList: any[] = [];
   public listProperties: ListBarProperties = new ListBarProperties();
-  purchaseListDetail: any[] = [];
+  salesListDetail: any[] = [];
+  public sales:any;
 
   constructor(
     private fb: FormBuilder, 
@@ -35,44 +36,45 @@ export class PurchaseComponent implements OnInit {
 
   ngOnInit(): void {
     this.initiateListbarProperties()
-    this.createFrmPurchase();
+    this.createFrmSales();
     this.loadGridDataSource();
     this.loadDropdowns();
-    this.loadPurchaseList();
+    this.loadSalesList();
   }
 
   initiateListbarProperties(){
     this.listProperties = new ListBarProperties();
     this.listProperties.Header='Id';
-    this.listProperties.Others = ['PurDate','SupplierId']
+    this.listProperties.Others = ['SalesDate','CustomerId']
   }
 
-  public loadGridDataSource(purchaseDetailInfo: any = []) {
-    if (purchaseDetailInfo === null || purchaseDetailInfo === undefined || purchaseDetailInfo.length === 0) {
-      purchaseDetailInfo = [];
+  public loadGridDataSource(salesDetailInfo: any = []) {
+    if (salesDetailInfo === null || salesDetailInfo === undefined || salesDetailInfo.length === 0) {
+      salesDetailInfo = [];
     }
-    this.gridData = purchaseDetailInfo;
+    this.gridData = salesDetailInfo;
   }
 
-  createFrmPurchase() {
-    this.frmPurchase = this.fb.group({
-      Id: new FormControl(0),
-      PurId: new FormControl(1),
-      PurDate: new FormControl(''),
-      SupplierId: new FormControl(''),
-      PurchaseDetails: this.fb.array([])
+  createFrmSales(dataItem: any ={}) {
+    console.log(dataItem);
+    this.frmSales = this.fb.group({
+      Id: new FormControl(dataItem.Id ?? 0),
+      SalesId: new FormControl(1),
+      SalesDate: new FormControl(dataItem.SalesDate?new Date(formatDate(dataItem.SalesDate,'yyyy-MM-dd','en')) :new Date()),
+      CustomerId: new FormControl(dataItem.CustomerId?? 0)
     });
   }
 
-  getPurchaseDetailsForm() {
-    return this.frmPurchase.get('PurchaseDetails') as FormArray;
+  getSalesDetailsForm() {
+    return this.frmSales.get('SalesDetails') as FormArray;
   }
 
   save() {
-    const purchase = this.frmPurchase.getRawValue();
-    purchase.PurchaseDetails = this.gridData;
-    if (purchase.Id && purchase.Id > 0) {
-      this.httpClient.put('http://localhost:5138/api/Purchase/' + purchase.Id, purchase).subscribe(
+    const sales = this.frmSales.getRawValue();
+    sales.SaleDetails = this.gridData;
+    console.log(sales);
+    if (sales.Id && sales.Id > 0) {
+      this.httpClient.put('http://localhost:5138/api/Sales/' + sales.Id, sales).subscribe(
         (res) => {
           this.clear();
         },
@@ -84,7 +86,7 @@ export class PurchaseComponent implements OnInit {
         }
       );
     } else {
-      this.httpClient.post('http://localhost:5138/api/Purchase', purchase).subscribe(
+      this.httpClient.post('http://localhost:5138/api/Sales', sales).subscribe(
         (res) => {
           console.log(res);
           this.clear();
@@ -98,10 +100,12 @@ export class PurchaseComponent implements OnInit {
       );
     }
 
+
+
   }
 
-  getPurchase() {
-    this.httpClient.get('http://localhost:5138/api/Purchase').subscribe(
+  getSales() {
+    this.httpClient.get('http://localhost:5138/api/Sales').subscribe(
       (res) => {
         // this.gridData = res as any[];
         console.log(res);
@@ -115,32 +119,38 @@ export class PurchaseComponent implements OnInit {
     )
   }
 
-  public createPurchaseDetailsFormGroup(dataItem: any = {}): FormGroup {
+  public createSalesDetailsFormGroup(dataItem: any = {}): FormGroup {
     return this.fb.group({
       Id: new FormControl(dataItem.Id ?? 0),
       ItemCode: new FormControl(dataItem.ItemCode, Validators.required),
       ItemName: new FormControl(dataItem.ItemName, Validators.required),
-      PurchasePrice: new FormControl(dataItem.PurchasePrice)
+      SalesPrice: new FormControl(dataItem.SalesPrice),
+      Qty: new FormControl(dataItem.Qty),
     });
   }
 
   clear() {
-    this.createFrmPurchase();
-    this.formGroup = this.createPurchaseDetailsFormGroup();
+    this.createFrmSales();
+    this.formGroup = this.createSalesDetailsFormGroup();
     this.gridData = [];
-    this.getPurchase();
+    this.loadSalesList();
+    this.getSales();
   }
 
   public addHandler({ sender }: AddEvent): void {
     this.closeEditor(sender);
-    this.formGroup = this.createPurchaseDetailsFormGroup();
+    this.formGroup = this.createSalesDetailsFormGroup();
     sender.addRow(this.formGroup);
   }
 
   public editHandler({ sender, rowIndex, dataItem }: EditEvent): void {
     this.closeEditor(sender);
-
-    this.formGroup = this.createPurchaseDetailsFormGroup(dataItem);
+    console.log(dataItem);
+    const index = this.itemDropdownData.filter(i=> i.ItemCode === dataItem.ItemCode);
+    const e= index[0];
+    console.log(e);
+    dataItem.ItemName = e.ItemName;
+    this.formGroup = this.createSalesDetailsFormGroup(dataItem);
 
     this.editedRowIndex = rowIndex;
 
@@ -181,8 +191,8 @@ export class PurchaseComponent implements OnInit {
     this.formGroup = undefined;
   }
 
-  getSupplier() {
-    this.httpClient.get('http://localhost:5138/api/common/supplierdropdown').subscribe(
+  getCustomer() {
+    this.httpClient.get('http://localhost:5138/api/common/customerdropdown').subscribe(
       (res) => {
         // this.gridData = res as any[];
         console.log(res);
@@ -197,9 +207,9 @@ export class PurchaseComponent implements OnInit {
   }
 
   loadDropdowns() {
-    forkJoin([this.loadSuppliers(), this.loadItems()]).subscribe(
+    forkJoin([this.loadCustomers(), this.loadItems()]).subscribe(
       ([res1, res2]) => {
-        this.supplierDropdownData = res1[`Data`];
+        this.customerDropdownData = res1[`Data`];
         this.itemDropdownData = res2 as any[];
       },
       (err) => {
@@ -208,27 +218,30 @@ export class PurchaseComponent implements OnInit {
     )
   }
 
-  loadSuppliers() {
-    return this.httpClient.get('http://localhost:5138/api/common/supliers');
+  loadCustomers() {
+    return this.httpClient.get('http://localhost:5138/api/common/customers');
   }
 
   loadItems() {
     return this.httpClient.get('http://localhost:5138/api/items');
   }
 
-  onItemDropDownChange(e){
+  onItemDropDownChange(ev){
+    const index = this.itemDropdownData.filter(i=> i.ItemCode === ev);
+    const e= index[0];
+    console.log(e);
     this.formGroup.patchValue({
       ItemName: e.ItemName,
-      PurchasePrice: e.PurchasePrice,
-      ItemCode: e.ItemCode,
+      SalesPrice: e.SalesPrice,
+      ItemCode: e.ItemCode
     });
   }
 
-//   private loadPurchase(): void {
+//   private loadSales(): void {
 //     this.baseDataService
 //       .callServer(
 //         'GET',
-//         'http://localhost:5138/api/Purchase'
+//         'http://localhost:5138/api/Sales'
 //       )
 //       .subscribe((res) => {
 //         // tslint:disable-next-line: no-string-literal
@@ -237,11 +250,11 @@ export class PurchaseComponent implements OnInit {
 //       });
 
 // }
-loadPurchaseList() {
-  return this.httpClient.get('http://localhost:5138/api/Purchase').subscribe(
+loadSalesList() {
+  return this.httpClient.get('http://localhost:5138/api/Sales').subscribe(
     (res)=>{
-      this.purchaseList = res as any[];
-      console.log(this.purchaseList);
+      this.salesList = res as any[];
+      console.log(this.salesList);
     },
     (err)=>{
       
@@ -253,11 +266,12 @@ loadPurchaseList() {
 }
 
 public itemSelected(item: any) {
-  return this.httpClient.get('http://localhost:5138/api/Purchase?&id=' + item.Id).subscribe(
+  console.log(item);
+  return this.httpClient.get('http://localhost:5138/api/Sales/' + item.Id).subscribe(
     (res)=>{
-      this.purchaseListDetail = res as any[];
-      console.log(this.purchaseListDetail);
-      this.mapItem(item);
+      this.sales = res;
+      console.log(res);
+      this.mapItem(this.sales);
     },
     (err)=>{
       //this.toastr.error('Error Occurred : ' + err, 'Error');
@@ -268,20 +282,23 @@ public itemSelected(item: any) {
   )
 }
 public mapItem(item: any) {
-  this.frmPurchase.reset();
-  this.frmPurchase.reset(this.createPurchaseFormGroup().value);
-  this.frmPurchase.patchValue({
-    id: item.id,
-    PurDate: item.PurDate,
-    SupplierId: item.SupplierId,
+
+  this.gridData = item.SaleDetails;
+  this.gridData.map((v,i)=>{
+    const index = this.itemDropdownData.filter(i=> i.ItemCode === v.ItemCode);
+    const e= index[0];
+    console.log(e);
+    v.ItemName = e.ItemName;
   });
+  this.gridData = this.gridData;
+  this.createFrmSales(item);
 }
 
-createPurchaseFormGroup(): FormGroup {
+createSalesFormGroup(): FormGroup {
   return this.fb.group({
     id:  new FormControl(null),
-    PurDate:  new FormControl(null),
-    SupplierId: new FormControl(null),
+    SalesDate:  new FormControl(null),
+    CustomerId: new FormControl(null),
   });
 }
 
