@@ -14,7 +14,7 @@ namespace TestApi.Models
         [Required(ErrorMessage = "Purchase Price is required Field")]
         [Display(Name = "Purchase Price")]
         public decimal PurchasePrice { get; set; }
-
+        public decimal Qty { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
 

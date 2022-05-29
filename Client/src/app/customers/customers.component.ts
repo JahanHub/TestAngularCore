@@ -45,7 +45,6 @@ export class CustomersComponent implements OnInit {
   }
   save(){
     const customer = this.frmCustomer.getRawValue();
-    console.log(customer);
 
     if(customer.Id && customer.Id > 0){
       this.httpClient.put('http://localhost:5138/api/Customers/'+customer.Id ,customer).subscribe(

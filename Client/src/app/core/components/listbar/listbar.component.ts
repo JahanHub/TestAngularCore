@@ -1,3 +1,4 @@
+import { formatDate } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ListBarProperties } from '../../models/list-bar.model';
 
@@ -8,6 +9,7 @@ import { ListBarProperties } from '../../models/list-bar.model';
 })
 export class ListbarComponent implements OnInit {
   @Input() itemList: any[];
+  @Input() listTitle: any[];
   @Input() properties: ListBarProperties;
 
   @Output() select = new EventEmitter<any>();
@@ -20,7 +22,14 @@ export class ListbarComponent implements OnInit {
   getOthersValue(item){
     let output: string = '';
     for (let index = 0; index < this.properties.Others.length; index++) {
-      output += item[this.properties.Others[index]] + ' - ';
+      let value = item[this.properties.Others[index]];
+      if (typeof value == 'string') {
+        const conValue = Date.parse(value);
+        if(!isNaN(conValue)){
+          value =formatDate(conValue,'yyyy-MM-dd hh:mm a','en');
+        }
+      }
+      output += value + ' - ';
     }
     output = output.substring(0,output.length - 3);
     return output;
@@ -28,6 +37,14 @@ export class ListbarComponent implements OnInit {
 
   onItemSelected(item){
     this.select.emit(item);
-    //console.log('onItemSelected',item);
   }
+
+  // public isSelected(id) {
+  //   return (
+  //     this.frmBuyerOrder.value[`id`] !== null &&
+  //     id === this.frmBuyerOrder.value[`id`]
+  //   );
+  // }
+
+
 }

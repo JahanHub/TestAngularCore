@@ -1,10 +1,10 @@
 <div class="list-group">
   <a routerLink="/dashboard"
     routerLinkActive="active"
-    class="list-group-item list-group-item-action">List</a>
+    class="list-group-item list-group-item-action">{{listTitle}}</a>
 
   <div class="list-group-item list-group-item-action flex-column flex-nowrap align-items-start py-2 px-0"
-  *ngFor="let item of itemList ; let i = index" [(value)]="itemList[i]">
+  *ngFor="let item of itemList ; let i = index" [(value)]="itemList[i]" >
   <div class="p-2 bl-sm" (click)="onItemSelected(item)">
     <h2 class="h5">{{ item[properties.Header] }}</h2>
     <p class="mb-0" *ngIf="properties.Others">{{ getOthersValue(item) }}</p>
@@ -12,3 +12,6 @@
 </div>
 
 </div>
+
+
+<!-- [class.active]="isSelected(item.Id)" -->

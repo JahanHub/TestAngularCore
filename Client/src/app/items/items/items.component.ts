@@ -32,7 +32,6 @@ export class ItemsComponent implements OnInit {
   }
   save(){
     const item = this.frmItem.getRawValue();
-    console.log(item);
 
     if(item.Id && item.Id > 0){
       this.httpClient.put('http://localhost:5138/api/Items/'+item.Id ,item).subscribe(

@@ -27,6 +27,7 @@ export class SalesComponent implements OnInit {
   public listProperties: ListBarProperties = new ListBarProperties();
   salesListDetail: any[] = [];
   public sales:any;
+  public listTitle = '';
 
   constructor(
     private fb: FormBuilder, 
@@ -35,6 +36,8 @@ export class SalesComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
+    
+    this.listTitle = "Sales List";
     this.initiateListbarProperties()
     this.createFrmSales();
     this.loadGridDataSource();
@@ -56,7 +59,6 @@ export class SalesComponent implements OnInit {
   }
 
   createFrmSales(dataItem: any ={}) {
-    console.log(dataItem);
     this.frmSales = this.fb.group({
       Id: new FormControl(dataItem.Id ?? 0),
       SalesId: new FormControl(1),
@@ -70,9 +72,9 @@ export class SalesComponent implements OnInit {
   }
 
   save() {
+    console.log('working.');
     const sales = this.frmSales.getRawValue();
     sales.SaleDetails = this.gridData;
-    console.log(sales);
     if (sales.Id && sales.Id > 0) {
       this.httpClient.put('http://localhost:5138/api/Sales/' + sales.Id, sales).subscribe(
         (res) => {
@@ -126,6 +128,7 @@ export class SalesComponent implements OnInit {
       ItemName: new FormControl(dataItem.ItemName, Validators.required),
       SalesPrice: new FormControl(dataItem.SalesPrice),
       Qty: new FormControl(dataItem.Qty),
+      Amount: new FormControl(dataItem.Amount ?? 0),
     });
   }
 
@@ -145,10 +148,8 @@ export class SalesComponent implements OnInit {
 
   public editHandler({ sender, rowIndex, dataItem }: EditEvent): void {
     this.closeEditor(sender);
-    console.log(dataItem);
     const index = this.itemDropdownData.filter(i=> i.ItemCode === dataItem.ItemCode);
     const e= index[0];
-    console.log(e);
     dataItem.ItemName = e.ItemName;
     this.formGroup = this.createSalesDetailsFormGroup(dataItem);
 
@@ -163,6 +164,7 @@ export class SalesComponent implements OnInit {
 
   public saveHandler({ sender, rowIndex, formGroup, isNew }: SaveEvent): void {
     const frmValue = formGroup.value;
+    frmValue.Amount = frmValue.SalesPrice * frmValue.Qty;
     sender.closeRow(rowIndex);
     if (isNew) {
       this.gridData.push(frmValue);
@@ -173,7 +175,6 @@ export class SalesComponent implements OnInit {
   }
 
   public removeHandler({ dataItem, rowIndex }: RemoveEvent): void {
-    console.log(dataItem);
     if (confirm('Are You Sure?')) {
       // const rowIndex = this.gridData.findIndex(dataItem);
       this.gridData.splice(rowIndex, 1);
@@ -229,11 +230,11 @@ export class SalesComponent implements OnInit {
   onItemDropDownChange(ev){
     const index = this.itemDropdownData.filter(i=> i.ItemCode === ev);
     const e= index[0];
-    console.log(e);
     this.formGroup.patchValue({
+      ItemCode: e.ItemCode,
       ItemName: e.ItemName,
       SalesPrice: e.SalesPrice,
-      ItemCode: e.ItemCode
+      Qty: e.Qty
     });
   }
 
@@ -254,7 +255,8 @@ loadSalesList() {
   return this.httpClient.get('http://localhost:5138/api/Sales').subscribe(
     (res)=>{
       this.salesList = res as any[];
-      console.log(this.salesList);
+      // this.salesList.map((v,i)=>{
+      // });
     },
     (err)=>{
       
@@ -266,11 +268,9 @@ loadSalesList() {
 }
 
 public itemSelected(item: any) {
-  console.log(item);
   return this.httpClient.get('http://localhost:5138/api/Sales/' + item.Id).subscribe(
     (res)=>{
       this.sales = res;
-      console.log(res);
       this.mapItem(this.sales);
     },
     (err)=>{
@@ -287,8 +287,8 @@ public mapItem(item: any) {
   this.gridData.map((v,i)=>{
     const index = this.itemDropdownData.filter(i=> i.ItemCode === v.ItemCode);
     const e= index[0];
-    console.log(e);
     v.ItemName = e.ItemName;
+    v.Amount = (v.Qty * v.SalesPrice);
   });
   this.gridData = this.gridData;
   this.createFrmSales(item);
@@ -302,25 +302,26 @@ createSalesFormGroup(): FormGroup {
   });
 }
 
-// public itemSelected(item: ItemMasterDto) {
-//   this.spinnerService.show();
-//   this.baseDataService
-//   .callServer('GET',
-//   'api/shareddata/itemmaster/details?idClient=' +
-//     this.clientService.getIdClient() +
-//     '&id=' + item.id,
-//     'v1').subscribe(
-//         (res) => {
-//           const itemMaster = res[`data`] as ItemMasterDto;
-//           this.mapItem(itemMaster);
-//           this.spinnerService.hide();
-//         },
-//         (err) => {
-//           this.toastr.error('Error Occurred : ' + err, 'Error');
-//           this.spinnerService.hide();
-//         }
-//     );
-// }
+public totalAmountCalculation(item: any, rowIndex: number) {
+    if (item !== null) {
+      const qty = this.formGroup.get('Qty').value;
+      const price = this.formGroup.get('SalesPrice').value;
+      const totalAmount = (qty*price);
+      item.Amount = totalAmount;
+      this.gridData[rowIndex] = item;
+      this.gridData = this.gridData;
+    }
+  }
 
+  getFooterQtySum(column) {
+    //let sum = 0;
+    // this.getPurchaseDetailsForm.controls.forEach((ele) => {
+    //   sum += ele.get(column).value;
+    // });
+
+    const sum = this.gridData.reduce((pre, cur) => pre += (cur[column]), 0);
+    return isNaN(sum) ? 0 : sum;
+
+}
 
 }

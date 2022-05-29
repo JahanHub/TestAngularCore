@@ -9,7 +9,7 @@ import { ListBarProperties } from 'src/app/core/models/list-bar.model';
 @Component({
   selector: 'app-purchase',
   templateUrl: './purchase.component.html',
-  //styleUrls: ['./purchase.component.css']
+  styleUrls: ['./purchase.component.css']
 })
 export class PurchaseComponent implements OnInit {
 
@@ -26,6 +26,13 @@ export class PurchaseComponent implements OnInit {
   public purchaseList: any[] = [];
   public listProperties: ListBarProperties = new ListBarProperties();
   purchaseListDetail: any[] = [];
+  public purchase:any;
+  public listTitle = '';
+
+  public defaultItem: { text: string; value: number } = {
+    text: 'Select item...',
+    value: null,
+  };
 
   constructor(
     private fb: FormBuilder, 
@@ -34,6 +41,7 @@ export class PurchaseComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
+    this.listTitle = "Purchase List";
     this.initiateListbarProperties()
     this.createFrmPurchase();
     this.loadGridDataSource();
@@ -54,12 +62,12 @@ export class PurchaseComponent implements OnInit {
     this.gridData = purchaseDetailInfo;
   }
 
-  createFrmPurchase() {
+  createFrmPurchase(dataItem: any ={}) {
     this.frmPurchase = this.fb.group({
-      Id: new FormControl(0),
+      Id: new FormControl(dataItem.Id ?? 0),
       PurId: new FormControl(1),
-      PurDate: new FormControl(''),
-      SupplierId: new FormControl(''),
+      PurDate: new FormControl(dataItem.PurDate?new Date(formatDate(dataItem.PurDate,'yyyy-MM-dd','en')) :new Date()),
+      SupplierId: new FormControl(dataItem.SupplierId?? 0),
       PurchaseDetails: this.fb.array([])
     });
   }
@@ -120,7 +128,9 @@ export class PurchaseComponent implements OnInit {
       Id: new FormControl(dataItem.Id ?? 0),
       ItemCode: new FormControl(dataItem.ItemCode, Validators.required),
       ItemName: new FormControl(dataItem.ItemName, Validators.required),
-      PurchasePrice: new FormControl(dataItem.PurchasePrice)
+      PurchasePrice: new FormControl(dataItem.PurchasePrice),
+      Qty: new FormControl(dataItem.Qty ?? 0),
+      Amount: new FormControl(dataItem.Amount ?? 0),
     });
   }
 
@@ -128,10 +138,13 @@ export class PurchaseComponent implements OnInit {
     this.createFrmPurchase();
     this.formGroup = this.createPurchaseDetailsFormGroup();
     this.gridData = [];
+    this.loadPurchaseList();
     this.getPurchase();
+    this.frmPurchase.reset();
   }
 
   public addHandler({ sender }: AddEvent): void {
+    console.log('sender',sender);
     this.closeEditor(sender);
     this.formGroup = this.createPurchaseDetailsFormGroup();
     sender.addRow(this.formGroup);
@@ -139,11 +152,8 @@ export class PurchaseComponent implements OnInit {
 
   public editHandler({ sender, rowIndex, dataItem }: EditEvent): void {
     this.closeEditor(sender);
-
     this.formGroup = this.createPurchaseDetailsFormGroup(dataItem);
-
     this.editedRowIndex = rowIndex;
-
     sender.editRow(rowIndex, this.formGroup);
   }
 
@@ -152,7 +162,19 @@ export class PurchaseComponent implements OnInit {
   }
 
   public saveHandler({ sender, rowIndex, formGroup, isNew }: SaveEvent): void {
+    console.log('this.gridData ',this.gridData);
     const frmValue = formGroup.value;
+   
+    var itemCode = frmValue.itemCode;
+    var data = this.gridData;
+    for(var item in data){
+        if(data[item].ItemCode == itemCode){
+            alert("Duplicates not allowed");
+        }
+    }
+
+
+    frmValue.Amount = frmValue.PurchasePrice * frmValue.Qty;
     sender.closeRow(rowIndex);
     if (isNew) {
       this.gridData.push(frmValue);
@@ -163,7 +185,6 @@ export class PurchaseComponent implements OnInit {
   }
 
   public removeHandler({ dataItem, rowIndex }: RemoveEvent): void {
-    console.log(dataItem);
     if (confirm('Are You Sure?')) {
       // const rowIndex = this.gridData.findIndex(dataItem);
       this.gridData.splice(rowIndex, 1);
@@ -219,8 +240,9 @@ export class PurchaseComponent implements OnInit {
   onItemDropDownChange(e){
     this.formGroup.patchValue({
       ItemName: e.ItemName,
-      PurchasePrice: e.PurchasePrice,
       ItemCode: e.ItemCode,
+      PurchasePrice: e.PurchasePrice,
+      Qty: e.Qty
     });
   }
 
@@ -241,7 +263,6 @@ loadPurchaseList() {
   return this.httpClient.get('http://localhost:5138/api/Purchase').subscribe(
     (res)=>{
       this.purchaseList = res as any[];
-      console.log(this.purchaseList);
     },
     (err)=>{
       
@@ -253,11 +274,10 @@ loadPurchaseList() {
 }
 
 public itemSelected(item: any) {
-  return this.httpClient.get('http://localhost:5138/api/Purchase?&id=' + item.Id).subscribe(
+  return this.httpClient.get('http://localhost:5138/api/Purchase/' + item.Id).subscribe(
     (res)=>{
-      this.purchaseListDetail = res as any[];
-      console.log(this.purchaseListDetail);
-      this.mapItem(item);
+      this.purchase = res;
+      this.mapItem(this.purchase);
     },
     (err)=>{
       //this.toastr.error('Error Occurred : ' + err, 'Error');
@@ -267,14 +287,18 @@ public itemSelected(item: any) {
     }
   )
 }
+
 public mapItem(item: any) {
-  this.frmPurchase.reset();
-  this.frmPurchase.reset(this.createPurchaseFormGroup().value);
-  this.frmPurchase.patchValue({
-    id: item.id,
-    PurDate: item.PurDate,
-    SupplierId: item.SupplierId,
+
+  this.gridData = item.PurchaseDetails;
+  this.gridData.map((v,i)=>{
+    const index = this.itemDropdownData.filter(i=> i.ItemCode === v.ItemCode);
+    const e= index[0];
+    v.ItemName = e.ItemName;
+    v.Amount = (v.Qty * v.PurchasePrice);
   });
+  this.gridData = this.gridData;
+  this.createFrmPurchase(item);
 }
 
 createPurchaseFormGroup(): FormGroup {
@@ -285,25 +309,26 @@ createPurchaseFormGroup(): FormGroup {
   });
 }
 
-// public itemSelected(item: ItemMasterDto) {
-//   this.spinnerService.show();
-//   this.baseDataService
-//   .callServer('GET',
-//   'api/shareddata/itemmaster/details?idClient=' +
-//     this.clientService.getIdClient() +
-//     '&id=' + item.id,
-//     'v1').subscribe(
-//         (res) => {
-//           const itemMaster = res[`data`] as ItemMasterDto;
-//           this.mapItem(itemMaster);
-//           this.spinnerService.hide();
-//         },
-//         (err) => {
-//           this.toastr.error('Error Occurred : ' + err, 'Error');
-//           this.spinnerService.hide();
-//         }
-//     );
-// }
+public totalAmountCalculation(item: any, rowIndex: number) {
+  if (item !== null) {
+    const qty = this.formGroup.get('Qty').value;
+    const price = this.formGroup.get('PurchasePrice').value;
+    const totalAmount = (qty*price);
+    item.Amount = totalAmount;
+    this.gridData[rowIndex] = item;
+    this.gridData = this.gridData;
+  }
+}
 
+getFooterQtySum(column) {
+    //let sum = 0;
+    // this.getPurchaseDetailsForm.controls.forEach((ele) => {
+    //   sum += ele.get(column).value;
+    // });
+
+    const sum = this.gridData.reduce((pre, cur) => pre += (cur[column]), 0);
+    return isNaN(sum) ? 0 : sum;
+
+}
 
 }

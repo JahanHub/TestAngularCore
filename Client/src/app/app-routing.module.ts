@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './components/login/login.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ProductsComponent } from './components/products/products.component';
 import { LayoutComponent } from './core/components/layout/layout.component';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
   { path: 'products', component: ProductsComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: '', component: LayoutComponent,
@@ -20,6 +18,7 @@ const routes: Routes = [
       { path: 'orders', loadChildren: () => import('./orders/orders.module').then((m) => m.OrdersModule), },
       { path: '', redirectTo: '', pathMatch: 'full' },
       { path: 'admin', loadChildren: () => import('./admin/admin.module').then((m) => m.AdminModule), },
+      //{ path: 'login', loadChildren: () => import('./login/login.module').then((m) => m.AdminModule), },
               ],},
   { path: '**', component: PageNotFoundComponent },
 ];

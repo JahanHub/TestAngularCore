@@ -1,6 +1,8 @@
 <div class="row">
   <div class="col-md-4">
-    <list-bar [itemList]="salesList" [properties]="listProperties" (select)="itemSelected($event)" ></list-bar>
+    <div style="height: 100px;">
+    <list-bar [itemList]="salesList" [listTitle]="listTitle" [properties]="listProperties" (select)="itemSelected($event)" ></list-bar>
+    </div>
   </div>
 
   <div class="col-md-8">
@@ -108,7 +110,7 @@
 
         </kendo-grid-column>
 
-        <kendo-grid-column field="SalesPrice" title="Sales Price">    
+        <kendo-grid-column field="SalesPrice" title="Sales Price" [headerStyle]="{'text-align': 'right'}" [footerStyle]="{'text-align': 'right'}" [style]="{'text-align': 'right'}">    
           <ng-template
             kendoGridCellTemplate
             let-dataItem="dataItem"
@@ -127,7 +129,7 @@
           </ng-template>
         </kendo-grid-column>
       
-        <kendo-grid-column field="Qty" title="Qty">    
+        <kendo-grid-column field="Qty" title="Qty" [headerStyle]="{'text-align': 'right'}" [footerStyle]="{'text-align': 'right'}" [style]="{'text-align': 'right'}">    
           <ng-template
             kendoGridCellTemplate
             let-dataItem="dataItem"
@@ -142,7 +144,29 @@
               type="text"
               class="form-control"
               [formControl]="formGroup.get('Qty')"
-              placeholder="Qty"/>
+              placeholder="Qty"
+              (change)="totalAmountCalculation($event, rowIndex)" />
+          </ng-template>
+          <ng-template kendoGridFooterTemplate let-column="column">
+            <span>{{ getFooterQtySum('Qty') }}</span>
+          </ng-template>
+        </kendo-grid-column>
+
+        <kendo-grid-column field="Amount" title="Amount" readonly="true" [headerStyle]="{'text-align': 'right'}" [footerStyle]="{'text-align': 'right'}" [style]="{'text-align': 'right'}">    
+          <ng-template
+            kendoGridCellTemplate
+            let-dataItem="dataItem"
+            let-rowIndex="rowIndex">
+            <span>{{ dataItem.Amount }}</span>
+          </ng-template>
+          <ng-template
+            kendoGridEditTemplate
+            let-dataItem="dataItem"
+            let-rowIndex="rowIndex">
+            <span>{{ dataItem.Amount }}</span>
+          </ng-template>
+          <ng-template kendoGridFooterTemplate let-column="column">
+            <span>{{ getFooterQtySum('Amount') }}</span>
           </ng-template>
         </kendo-grid-column>
 

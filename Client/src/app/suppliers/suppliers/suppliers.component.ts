@@ -37,7 +37,6 @@ export class SuppliersComponent implements OnInit {
 
   save(){
     const supplier = this.frmSupplier.getRawValue();
-    console.log(supplier);
 
     if(supplier.Id && supplier.Id > 0){
       this.httpClient.put('http://localhost:5138/api/suppliers/'+supplier.Id ,supplier).subscribe(

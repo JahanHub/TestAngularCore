@@ -24,7 +24,7 @@ namespace TestApi.Controllers
           {
               return NotFound();
           }
-            return await _context.Purchases.ToListAsync();
+            return await _context.Purchases.Include(k => k.PurchaseDetails).ToListAsync();
         }
 
         // GET: api/Purchases/5
@@ -35,7 +35,7 @@ namespace TestApi.Controllers
           {
               return NotFound();
           }
-            var Purchase = await _context.Purchases.FirstOrDefaultAsync(i=> i.Id ==id);
+            var Purchase = await _context.Purchases.Include(j => j.PurchaseDetails).FirstOrDefaultAsync(i => i.Id == id);
 
             if (Purchase == null)
             {
@@ -54,8 +54,15 @@ namespace TestApi.Controllers
             {
                 return BadRequest();
             }
+            var existingData = _context.PurchaseDetails.AsNoTracking().Where(i => i.Purchase.Id == Purchase.Id).ToList();
+            if (existingData.Count>0)
+            {
+                var allExistingIds = Purchase.PurchaseDetails.Where(i => i.Id > 0).Select(p => p.Id).ToList();
+                var deletedDetails = existingData.Where(i => !allExistingIds.Contains(i.Id)).ToList();
+                _context.PurchaseDetails.RemoveRange(deletedDetails);
+            }
 
-            _context.Entry(Purchase).State = EntityState.Modified;
+            _context.Purchases.Update(Purchase);
 
             try
             {
