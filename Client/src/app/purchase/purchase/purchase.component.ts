@@ -1,10 +1,11 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AddEvent, CancelEvent, EditEvent, GridComponent, RemoveEvent, SaveEvent } from '@progress/kendo-angular-grid';
 import { DatePipe, formatDate } from '@angular/common';
 import { forkJoin } from 'rxjs';
 import { ListBarProperties } from 'src/app/core/models/list-bar.model';
+import { DropDown } from 'src/app/core/models/drop-down.model';
+import { BaseApiService } from 'src/app/core/services/base-api.service';
 
 @Component({
   selector: 'app-purchase',
@@ -29,14 +30,11 @@ export class PurchaseComponent implements OnInit {
   public purchase:any;
   public listTitle = '';
 
-  public defaultItem: { text: string; value: number } = {
-    text: 'Select item...',
-    value: null,
-  };
+  public defaultItem: DropDown = new DropDown();
 
   constructor(
     private fb: FormBuilder, 
-    private httpClient: HttpClient,
+    private apiService: BaseApiService,
     //private toastr: ToastrService,
     ) { }
 
@@ -80,7 +78,7 @@ export class PurchaseComponent implements OnInit {
     const purchase = this.frmPurchase.getRawValue();
     purchase.PurchaseDetails = this.gridData;
     if (purchase.Id && purchase.Id > 0) {
-      this.httpClient.put('http://localhost:5138/api/Purchase/' + purchase.Id, purchase).subscribe(
+      this.apiService.put('api/Purchase/' + purchase.Id, purchase).subscribe(
         (res) => {
           this.clear();
         },
@@ -92,7 +90,7 @@ export class PurchaseComponent implements OnInit {
         }
       );
     } else {
-      this.httpClient.post('http://localhost:5138/api/Purchase', purchase).subscribe(
+      this.apiService.post('api/Purchase', purchase).subscribe(
         (res) => {
           console.log(res);
           this.clear();
@@ -109,7 +107,7 @@ export class PurchaseComponent implements OnInit {
   }
 
   getPurchase() {
-    this.httpClient.get('http://localhost:5138/api/Purchase').subscribe(
+    this.apiService.get('api/Purchase').subscribe(
       (res) => {
         // this.gridData = res as any[];
         console.log(res);
@@ -162,16 +160,17 @@ export class PurchaseComponent implements OnInit {
   }
 
   public saveHandler({ sender, rowIndex, formGroup, isNew }: SaveEvent): void {
-    console.log('this.gridData ',this.gridData);
     const frmValue = formGroup.value;
    
-    var itemCode = frmValue.itemCode;
-    var data = this.gridData;
-    for(var item in data){
-        if(data[item].ItemCode == itemCode){
-            alert("Duplicates not allowed");
-        }
-    }
+    // var itemCode = frmValue.itemCode;
+    // var data = this.gridData;
+    // for(var item in data){
+    //     if(data[item].ItemCode == itemCode){
+    //       console.log(data[item].ItemCode, itemCode);
+    //         alert("Duplicates not allowed");
+    //         return;
+    //     }
+    // }
 
 
     frmValue.Amount = frmValue.PurchasePrice * frmValue.Qty;
@@ -203,7 +202,7 @@ export class PurchaseComponent implements OnInit {
   }
 
   getSupplier() {
-    this.httpClient.get('http://localhost:5138/api/common/supplierdropdown').subscribe(
+    this.apiService.get('api/common/supplierdropdown').subscribe(
       (res) => {
         // this.gridData = res as any[];
         console.log(res);
@@ -230,11 +229,11 @@ export class PurchaseComponent implements OnInit {
   }
 
   loadSuppliers() {
-    return this.httpClient.get('http://localhost:5138/api/common/supliers');
+    return this.apiService.get('api/common/supliers');
   }
 
   loadItems() {
-    return this.httpClient.get('http://localhost:5138/api/items');
+    return this.apiService.get('api/items');
   }
 
   onItemDropDownChange(e){
@@ -250,7 +249,7 @@ export class PurchaseComponent implements OnInit {
 //     this.baseDataService
 //       .callServer(
 //         'GET',
-//         'http://localhost:5138/api/Purchase'
+//         'api/Purchase'
 //       )
 //       .subscribe((res) => {
 //         // tslint:disable-next-line: no-string-literal
@@ -260,7 +259,7 @@ export class PurchaseComponent implements OnInit {
 
 // }
 loadPurchaseList() {
-  return this.httpClient.get('http://localhost:5138/api/Purchase').subscribe(
+  return this.apiService.get('api/Purchase').subscribe(
     (res)=>{
       this.purchaseList = res as any[];
     },
@@ -274,7 +273,7 @@ loadPurchaseList() {
 }
 
 public itemSelected(item: any) {
-  return this.httpClient.get('http://localhost:5138/api/Purchase/' + item.Id).subscribe(
+  return this.apiService.get('api/Purchase/' + item.Id).subscribe(
     (res)=>{
       this.purchase = res;
       this.mapItem(this.purchase);
@@ -326,9 +325,8 @@ getFooterQtySum(column) {
     //   sum += ele.get(column).value;
     // });
 
-    const sum = this.gridData.reduce((pre, cur) => pre += (cur[column]), 0);
+    const sum = this.gridData.reduce((pre, cur) => pre += (+cur[column]), 0);
     return isNaN(sum) ? 0 : sum;
-
 }
 
 }

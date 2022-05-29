@@ -99,19 +99,21 @@ namespace TestApi.Controllers
 
         // DELETE: api/Sales/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteSales(int id)
+        public async Task<IActionResult> DeleteSales(int id,CancellationToken cancellationToken = default)
         {
             if (_context.Sales == null)
             {
                 return NotFound();
             }
-            var Sales = await _context.Sales.FindAsync(id);
-            if (Sales == null)
+            var sales = await _context.Sales.FindAsync(id);
+            var salesDetails = await _context.SalesDetails.Where(i=> i.Sales.Id.Equals(id)).ToListAsync(cancellationToken);
+            if (sales == null)
             {
                 return NotFound();
             }
 
-            _context.Sales.Remove(Sales);
+            _context.SalesDetails.RemoveRange(salesDetails);
+            _context.Sales.Remove(sales);
             await _context.SaveChangesAsync();
 
             return NoContent();

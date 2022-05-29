@@ -1,10 +1,10 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AddEvent, CancelEvent, EditEvent, GridComponent, RemoveEvent, SaveEvent } from '@progress/kendo-angular-grid';
 import { DatePipe, formatDate } from '@angular/common';
 import { forkJoin } from 'rxjs';
 import { ListBarProperties } from 'src/app/core/models/list-bar.model';
+import { BaseApiService } from 'src/app/core/services/base-api.service';
 
 @Component({
   selector: 'app-sales',
@@ -31,7 +31,7 @@ export class SalesComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder, 
-    private httpClient: HttpClient,
+    private apiService: BaseApiService,
     //private toastr: ToastrService,
     ) { }
 
@@ -76,7 +76,7 @@ export class SalesComponent implements OnInit {
     const sales = this.frmSales.getRawValue();
     sales.SaleDetails = this.gridData;
     if (sales.Id && sales.Id > 0) {
-      this.httpClient.put('http://localhost:5138/api/Sales/' + sales.Id, sales).subscribe(
+      this.apiService.put('api/Sales/' + sales.Id, sales).subscribe(
         (res) => {
           this.clear();
         },
@@ -88,7 +88,7 @@ export class SalesComponent implements OnInit {
         }
       );
     } else {
-      this.httpClient.post('http://localhost:5138/api/Sales', sales).subscribe(
+      this.apiService.post('api/Sales', sales).subscribe(
         (res) => {
           console.log(res);
           this.clear();
@@ -101,13 +101,41 @@ export class SalesComponent implements OnInit {
         }
       );
     }
-
-
-
   }
 
+  public delete(item) {
+    if (confirm('Are you sure to delete? Item: ' + item.Id)) {
+      return this.apiService.delete('api/Sales/' + item.Id).subscribe(
+        (res)=>{
+          this.frmSales.reset();
+        },
+        (err)=>{
+          //this.toastr.error('Error Occurred : ' + err, 'Error');
+        },
+        ()=>{
+    
+        }
+      )
+    }
+  }
+
+  // public delete(item: any) {
+  //   return this.apiService.get('api/Sales/' + item.Id).subscribe(
+  //     (res)=>{
+  //       this.sales = res;
+  //       this.mapItem(this.sales);
+  //     },
+  //     (err)=>{
+  //       //this.toastr.error('Error Occurred : ' + err, 'Error');
+  //     },
+  //     ()=>{
+  
+  //     }
+  //   )
+  // }
+
   getSales() {
-    this.httpClient.get('http://localhost:5138/api/Sales').subscribe(
+    this.apiService.get('api/Sales').subscribe(
       (res) => {
         // this.gridData = res as any[];
         console.log(res);
@@ -164,7 +192,14 @@ export class SalesComponent implements OnInit {
 
   public saveHandler({ sender, rowIndex, formGroup, isNew }: SaveEvent): void {
     const frmValue = formGroup.value;
+    const ind = this.gridData.filter(i=> i.ItemCode == frmValue.ItemCode);
+    if (ind.length > 0) {
+      alert('Duplicate Found!')
+      return;
+    }
     frmValue.Amount = frmValue.SalesPrice * frmValue.Qty;
+
+
     sender.closeRow(rowIndex);
     if (isNew) {
       this.gridData.push(frmValue);
@@ -193,7 +228,7 @@ export class SalesComponent implements OnInit {
   }
 
   getCustomer() {
-    this.httpClient.get('http://localhost:5138/api/common/customerdropdown').subscribe(
+    this.apiService.get('api/common/customerdropdown').subscribe(
       (res) => {
         // this.gridData = res as any[];
         console.log(res);
@@ -220,11 +255,11 @@ export class SalesComponent implements OnInit {
   }
 
   loadCustomers() {
-    return this.httpClient.get('http://localhost:5138/api/common/customers');
+    return this.apiService.get('api/common/customers');
   }
 
   loadItems() {
-    return this.httpClient.get('http://localhost:5138/api/items');
+    return this.apiService.get('api/items');
   }
 
   onItemDropDownChange(ev){
@@ -242,7 +277,7 @@ export class SalesComponent implements OnInit {
 //     this.baseDataService
 //       .callServer(
 //         'GET',
-//         'http://localhost:5138/api/Sales'
+//         'api/Sales'
 //       )
 //       .subscribe((res) => {
 //         // tslint:disable-next-line: no-string-literal
@@ -252,7 +287,7 @@ export class SalesComponent implements OnInit {
 
 // }
 loadSalesList() {
-  return this.httpClient.get('http://localhost:5138/api/Sales').subscribe(
+  return this.apiService.get('api/Sales').subscribe(
     (res)=>{
       this.salesList = res as any[];
       // this.salesList.map((v,i)=>{
@@ -268,7 +303,7 @@ loadSalesList() {
 }
 
 public itemSelected(item: any) {
-  return this.httpClient.get('http://localhost:5138/api/Sales/' + item.Id).subscribe(
+  return this.apiService.get('api/Sales/' + item.Id).subscribe(
     (res)=>{
       this.sales = res;
       this.mapItem(this.sales);
@@ -314,12 +349,12 @@ public totalAmountCalculation(item: any, rowIndex: number) {
   }
 
   getFooterQtySum(column) {
-    //let sum = 0;
-    // this.getPurchaseDetailsForm.controls.forEach((ele) => {
+    // let sum = 0;
+    // this.formGroup.controls.forEach((ele) => {
     //   sum += ele.get(column).value;
     // });
 
-    const sum = this.gridData.reduce((pre, cur) => pre += (cur[column]), 0);
+    const sum = this.gridData.reduce((pre, cur) => pre += (+cur[column]), 0);
     return isNaN(sum) ? 0 : sum;
 
 }

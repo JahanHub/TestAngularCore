@@ -18,6 +18,6 @@ namespace TestApi.Models
         public DateTime CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
 
-        public virtual Sale? Sales { get; set; }
+        public virtual Sale Sales { get; set; } = new Sale();
     }
 }

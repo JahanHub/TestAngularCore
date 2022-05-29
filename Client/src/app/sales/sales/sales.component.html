@@ -9,7 +9,12 @@
     <form [formGroup]="frmSales">
       <div class="form-row">
 
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-3">
+          <label for="Id">Purchase ID</label>
+          <input id="Id" name="Id" type="text" value="" formControlName="Id" maxlength="11" readonly="true" />
+        </div>
+
+        <div class="form-group col-md-3">
           <label for="SalesDate">Sales Date</label>
           <kendo-datepicker
             format="yyyy-MM-dd"
@@ -33,8 +38,9 @@
 
       </div>
     
-      <button (click)="save()" class="btn btn-primary">Save</button>
-      <button (click)="clear()" class="btn btn-primary">Clear</button>
+      <button (click)="save()" class="btn btn-primary">Save</button> &nbsp;
+      <button (click)="clear()" class="btn btn-primary">Clear</button> &nbsp;
+      <button (click)="delete(frmSales.value)" class="btn btn-danger">Delete</button>
     
       <br />
       <br />

@@ -16,7 +16,6 @@ import { CoreModule } from '../core/core.module';
     PurchaseRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule,
     GridModule,
     DateInputsModule,
     DropDownsModule,

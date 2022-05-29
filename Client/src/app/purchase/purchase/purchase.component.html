@@ -7,7 +7,12 @@
     <form [formGroup]="frmPurchase">
       <div class="form-row">
 
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-3">
+          <label for="Id">Purchase ID</label>
+          <input id="Id" name="Id" type="text" value="" formControlName="Id" maxlength="11" readonly="true" />
+        </div>
+
+        <div class="form-group col-md-3">
           <label for="PurDate">Purchase Date</label>
           <kendo-datepicker
             [format]="'yyyy-MM-dd'"
@@ -76,6 +81,7 @@
             [data]="itemDropdownData"
             textField="ItemCode"
             valueField="ItemCode" valueField="value"
+            [defaultItem]="defaultItem"
             (valueChange)="onItemDropDownChange($event, rowIndex)">
 
           </kendo-dropdownlist>
