@@ -1,6 +1,6 @@
 export class DropDown{
     constructor(){
-        this.Text = 'Select Item'
+        this.Text = 'Select'
     }
     Text: string;
     Value: any;

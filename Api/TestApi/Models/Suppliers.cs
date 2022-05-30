@@ -33,6 +33,13 @@ namespace TestApi.Models
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.")]
         public string City { get; set; }
 
+        [Required(ErrorMessage = "Upazila is required Field")]
+        [Display(Name = "Upazila")]
+        public int UpazilaId { get; set; }
+
+        [Required(ErrorMessage = "Village is required Field")]
+        [Display(Name = "Village")]
+        public int VillageId { get; set; }
 
         [Required(ErrorMessage = "Zip is required Field")]
         [Display(Name = "Zip")]

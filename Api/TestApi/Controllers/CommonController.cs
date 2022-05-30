@@ -41,5 +41,21 @@ namespace TestApi.Controllers
 
             return drpItems;
         }
+
+        [HttpGet("upazilas")]
+        public async Task<ActionResult<ResponseDetail<IEnumerable<DropDown>>>> GetUpazilas()
+        {
+            var drpItems = await _commonApi.GetUpazilaDropDowns();
+
+            return drpItems;
+        }
+
+        [HttpGet("villages")]
+        public async Task<ActionResult<ResponseDetail<IEnumerable<DropDown>>>> GetVillages([FromQuery] int upazilaId)
+       {
+            var drpItems = await _commonApi.GetVillageDropDowns(upazilaId);
+
+            return drpItems;
+        }
     }
 }

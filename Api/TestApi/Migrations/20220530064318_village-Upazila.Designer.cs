@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TestApi.Contexts;
 
@@ -11,9 +12,10 @@ using TestApi.Contexts;
 namespace TestApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220530064318_village-Upazila")]
+    partial class villageUpazila
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -274,14 +276,8 @@ namespace TestApi.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<int>("UpazilaId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<int>("VillageId")
-                        .HasColumnType("int");
 
                     b.Property<string>("Zip")
                         .IsRequired()

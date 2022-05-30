@@ -1,8 +1,76 @@
+<!-- 
+<a
+  class="btn btn-primary"
+  role="button"
+  (click)="linkCollapse.toggle()"
+  [attr.aria-expanded]="!linkCollapse.collapsed"
+  aria-controls="multiCollapseExample1"
+>
+  Toggle first element
+</a>
+<button
+  class="btn btn-primary"
+  type="button"
+  (click)="buttonCollapse.toggle()"
+  [attr.aria-expanded]="!buttonCollapse.collapsed"
+  aria-controls="multiCollapseExample2"
+>
+  Toggle second element
+</button>
+<button
+  class="btn btn-primary"
+  type="button"
+  (click)="linkCollapse.toggle(); buttonCollapse.toggle()"
+  [attr.aria-expanded]="!linkCollapse.collapsed && !buttonCollapse.collapsed"
+  aria-controls="multiCollapseExample1 multiCollapseExample2"
+>
+  Toggle both elements
+</button>
+
+<div class="row">
+  <div class="col">
+    <div
+      class="collapse multi-collapse mt-3"
+      id="multiCollapseExample1"
+      mdbCollapse
+      #linkCollapse="mdbCollapse"
+    >
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+      richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson
+      cred nesciunt sapiente ea proident.
+    </div>
+  </div>
+  <div class="col">
+    <div
+      class="collapse multi-collapse mt-3"
+      id="multiCollapseExample2"
+      mdbCollapse
+      #buttonCollapse="mdbCollapse"
+    >
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+      richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson
+      cred nesciunt sapiente ea proident.
+    </div>
+  </div>
+</div> -->
+
+
+
 <div class="list-group">
 <a routerLink="/dashboard"
 routerLinkActive="active"
 class="list-group-item list-group-item-action"
 [routerLinkActiveOptions]="{ exact: true }">Home</a>
+
+<a routerLink="/customers"
+routerLinkActive="active"
+class="list-group-item list-group-item-action"
+[routerLinkActiveOptions]="{ exact: true }">Settings</a>
+
+<a routerLink="/customers"
+routerLinkActive="active"
+class="list-group-item list-group-item-action"
+[routerLinkActiveOptions]="{ exact: true }">Master Data</a>
 
 <a routerLink="/customers"
 routerLinkActive="active"

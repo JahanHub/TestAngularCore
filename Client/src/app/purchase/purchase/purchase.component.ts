@@ -103,7 +103,24 @@ export class PurchaseComponent implements OnInit {
         }
       );
     }
+  }
 
+  public delete() {
+    const id = this.frmPurchase.getRawValue().Id;
+    if (confirm('Are you sure to delete? Item: ' + id)) {
+      return this.apiService.delete('api/Purchase/' + id).subscribe(
+        (res)=>{
+          this.frmPurchase.reset();
+          this.clear();
+        },
+        (err)=>{
+          //this.toastr.error('Error Occurred : ' + err, 'Error');
+        },
+        ()=>{
+   
+        }
+      )
+    }
   }
 
   getPurchase() {
@@ -127,7 +144,7 @@ export class PurchaseComponent implements OnInit {
       ItemCode: new FormControl(dataItem.ItemCode, Validators.required),
       ItemName: new FormControl(dataItem.ItemName, Validators.required),
       PurchasePrice: new FormControl(dataItem.PurchasePrice),
-      Qty: new FormControl(dataItem.Qty ?? 0),
+      Qty: new FormControl(dataItem.Qty ?? 0, Validators.required),
       Amount: new FormControl(dataItem.Amount ?? 0),
     });
   }
@@ -142,7 +159,6 @@ export class PurchaseComponent implements OnInit {
   }
 
   public addHandler({ sender }: AddEvent): void {
-    console.log('sender',sender);
     this.closeEditor(sender);
     this.formGroup = this.createPurchaseDetailsFormGroup();
     sender.addRow(this.formGroup);
@@ -161,17 +177,12 @@ export class PurchaseComponent implements OnInit {
 
   public saveHandler({ sender, rowIndex, formGroup, isNew }: SaveEvent): void {
     const frmValue = formGroup.value;
-   
-    // var itemCode = frmValue.itemCode;
-    // var data = this.gridData;
-    // for(var item in data){
-    //     if(data[item].ItemCode == itemCode){
-    //       console.log(data[item].ItemCode, itemCode);
-    //         alert("Duplicates not allowed");
-    //         return;
-    //     }
-    // }
 
+    const duplicateData = this.gridData.filter(i=> i.ItemCode == frmValue.ItemCode);
+    if (duplicateData.length > 0) {
+      alert('Duplicate Found!')
+      return;
+    }
 
     frmValue.Amount = frmValue.PurchasePrice * frmValue.Qty;
     sender.closeRow(rowIndex);

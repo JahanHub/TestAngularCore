@@ -5,6 +5,7 @@ import { DatePipe, formatDate } from '@angular/common';
 import { forkJoin } from 'rxjs';
 import { ListBarProperties } from 'src/app/core/models/list-bar.model';
 import { BaseApiService } from 'src/app/core/services/base-api.service';
+import { DropDown } from 'src/app/core/models/drop-down.model';
 
 @Component({
   selector: 'app-sales',
@@ -28,6 +29,8 @@ export class SalesComponent implements OnInit {
   salesListDetail: any[] = [];
   public sales:any;
   public listTitle = '';
+
+  public defaultItem: DropDown = new DropDown();
 
   constructor(
     private fb: FormBuilder, 
@@ -72,7 +75,6 @@ export class SalesComponent implements OnInit {
   }
 
   save() {
-    console.log('working.');
     const sales = this.frmSales.getRawValue();
     sales.SaleDetails = this.gridData;
     if (sales.Id && sales.Id > 0) {
@@ -108,6 +110,7 @@ export class SalesComponent implements OnInit {
       return this.apiService.delete('api/Sales/' + item.Id).subscribe(
         (res)=>{
           this.frmSales.reset();
+          this.clear();
         },
         (err)=>{
           //this.toastr.error('Error Occurred : ' + err, 'Error');
@@ -118,21 +121,6 @@ export class SalesComponent implements OnInit {
       )
     }
   }
-
-  // public delete(item: any) {
-  //   return this.apiService.get('api/Sales/' + item.Id).subscribe(
-  //     (res)=>{
-  //       this.sales = res;
-  //       this.mapItem(this.sales);
-  //     },
-  //     (err)=>{
-  //       //this.toastr.error('Error Occurred : ' + err, 'Error');
-  //     },
-  //     ()=>{
-  
-  //     }
-  //   )
-  // }
 
   getSales() {
     this.apiService.get('api/Sales').subscribe(
@@ -155,7 +143,7 @@ export class SalesComponent implements OnInit {
       ItemCode: new FormControl(dataItem.ItemCode, Validators.required),
       ItemName: new FormControl(dataItem.ItemName, Validators.required),
       SalesPrice: new FormControl(dataItem.SalesPrice),
-      Qty: new FormControl(dataItem.Qty),
+      Qty: new FormControl(dataItem.Qty ?? 0, Validators.required),
       Amount: new FormControl(dataItem.Amount ?? 0),
     });
   }
@@ -192,13 +180,12 @@ export class SalesComponent implements OnInit {
 
   public saveHandler({ sender, rowIndex, formGroup, isNew }: SaveEvent): void {
     const frmValue = formGroup.value;
-    const ind = this.gridData.filter(i=> i.ItemCode == frmValue.ItemCode);
-    if (ind.length > 0) {
+    const duplicateData = this.gridData.filter(i=> i.ItemCode == frmValue.ItemCode);
+    if (duplicateData.length > 0) {
       alert('Duplicate Found!')
       return;
     }
     frmValue.Amount = frmValue.SalesPrice * frmValue.Qty;
-
 
     sender.closeRow(rowIndex);
     if (isNew) {
@@ -273,19 +260,6 @@ export class SalesComponent implements OnInit {
     });
   }
 
-//   private loadSales(): void {
-//     this.baseDataService
-//       .callServer(
-//         'GET',
-//         'api/Sales'
-//       )
-//       .subscribe((res) => {
-//         // tslint:disable-next-line: no-string-literal
-
-//         this.pur = res[`data`];
-//       });
-
-// }
 loadSalesList() {
   return this.apiService.get('api/Sales').subscribe(
     (res)=>{

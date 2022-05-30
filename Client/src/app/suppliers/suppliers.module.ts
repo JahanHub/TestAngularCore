@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GridModule } from '@progress/kendo-angular-grid';
 import { SuppliersComponent } from './suppliers/suppliers.component';
 import { SuppliersRoutingModule } from './suppliers-routing.module';
+import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 @NgModule({
   declarations: [SuppliersComponent],
   imports: [
@@ -15,6 +16,7 @@ import { SuppliersRoutingModule } from './suppliers-routing.module';
     ReactiveFormsModule,
     HttpClientModule,
     GridModule,
+    DropDownsModule,
   ]
 })
 export class SuppliersModule { }

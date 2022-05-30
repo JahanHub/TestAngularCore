@@ -35,14 +35,14 @@ namespace TestApi.Controllers
           {
               return NotFound();
           }
-            var Purchase = await _context.Purchases.Include(j => j.PurchaseDetails).FirstOrDefaultAsync(i => i.Id == id);
+            var purchase = await _context.Purchases.Include(j => j.PurchaseDetails).FirstOrDefaultAsync(i => i.Id == id);
 
-            if (Purchase == null)
+            if (purchase == null)
             {
                 return NotFound();
             }
 
-            return Purchase;
+            return purchase;
         }
 
         // PUT: api/Purchases/5
@@ -100,19 +100,22 @@ namespace TestApi.Controllers
 
         // DELETE: api/Purchases/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeletePurchase(int id)
+        public async Task<IActionResult> DeletePurchase(int id, CancellationToken cancellationToken = default)
         {
             if (_context.Purchases == null)
             {
                 return NotFound();
             }
-            var Purchase = await _context.Purchases.FindAsync(id);
-            if (Purchase == null)
+            var purchase = await _context.Purchases.FindAsync(id);
+            var purchaseDetails = await _context.PurchaseDetails.Where(i => i.Purchase.Id.Equals(id)).ToListAsync(cancellationToken);
+
+            if (purchase == null)
             {
                 return NotFound();
             }
 
-            _context.Purchases.Remove(Purchase);
+            _context.PurchaseDetails.RemoveRange(purchaseDetails);
+            _context.Purchases.Remove(purchase);
             await _context.SaveChangesAsync();
 
             return NoContent();

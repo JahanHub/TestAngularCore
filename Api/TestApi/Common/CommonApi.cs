@@ -76,5 +76,49 @@ namespace TestApi.Common
             responseDetails.Success = true;
             return responseDetails;
         }
+
+        public async Task<ResponseDetail<IEnumerable<DropDown>>> GetUpazilaDropDowns(CancellationToken cancellationToken = default)
+        {
+            var responseDetails = new ResponseDetail<IEnumerable<DropDown>>();
+
+            var result = await _context.Upazilas
+                .AsNoTracking()
+                .Select(i => new DropDown()
+                {
+                    Text = i.Name,
+                    Value = i.Id
+                })
+                .ToListAsync(cancellationToken);
+
+            responseDetails.Data = result;
+            responseDetails.Message = "Data Found successfully!";
+            responseDetails.Count = result.Count;
+            responseDetails.Exception = null;
+            responseDetails.MessageType = MessageType.Success;
+            responseDetails.Success = true;
+            return responseDetails;
+        }
+
+        public async Task<ResponseDetail<IEnumerable<DropDown>>> GetVillageDropDowns(int upazilaId, CancellationToken cancellationToken = default)
+        {
+            var responseDetails = new ResponseDetail<IEnumerable<DropDown>>();
+
+            var result = await _context.Villages.Where(t=>t.UpazilaId.Equals(upazilaId))
+                .AsNoTracking()
+                .Select(i => new DropDown()
+                {
+                    Text = i.Name,
+                    Value = i.Id
+                })
+                .ToListAsync(cancellationToken);
+
+            responseDetails.Data = result;
+            responseDetails.Message = "Data Found successfully!";
+            responseDetails.Count = result.Count;
+            responseDetails.Exception = null;
+            responseDetails.MessageType = MessageType.Success;
+            responseDetails.Success = true;
+            return responseDetails;
+        }
     }
 }

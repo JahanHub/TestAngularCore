@@ -31,7 +31,7 @@
             [valuePrimitive]="true"
             textField="Text"
             valueField="Value"
-            [defaultItem]="{Text:'Select One',Value:'0'}"
+            [defaultItem]="defaultItem"
             formControlName="CustomerId">
           </kendo-dropdownlist>
         </div>
@@ -88,6 +88,7 @@
             valueField="ItemCode"
             [formControl]="formGroup.get('ItemCode')"
             [valuePrimitive]="true"
+            [defaultItem]="{ItemCode:'Select ..'}"
             (valueChange)="onItemDropDownChange($event, rowIndex)">
 
           </kendo-dropdownlist>
@@ -111,7 +112,7 @@
               type="text"
               class="form-control"
               [formControl]="formGroup.get('ItemName')"
-              placeholder="ItemName"/>
+              />
           </ng-template>
 
         </kendo-grid-column>
@@ -131,7 +132,7 @@
               type="text"
               class="form-control"
               [formControl]="formGroup.get('SalesPrice')"
-              placeholder="Sales Price"/>
+              />
           </ng-template>
         </kendo-grid-column>
       
@@ -147,10 +148,10 @@
             let-dataItem="dataItem"
             let-rowIndex="rowIndex">
             <input
-              type="text"
+              type="number"
               class="form-control"
               [formControl]="formGroup.get('Qty')"
-              placeholder="Qty"
+              
               (change)="totalAmountCalculation($event, rowIndex)" />
           </ng-template>
           <ng-template kendoGridFooterTemplate let-column="column">

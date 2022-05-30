@@ -36,8 +36,9 @@
 
       </div>
     
-      <button (click)="save()" class="btn btn-primary">Save</button>
-      <button (click)="clear()" class="btn btn-primary">Clear</button>
+      <button (click)="save()" class="btn btn-primary">Save</button>&nbsp;
+      <button (click)="clear()" class="btn btn-primary">Clear</button>&nbsp;
+      <button (click)="delete()" class="btn btn-danger">Delete</button>
     
       <br />
       <br />
@@ -80,8 +81,8 @@
           <kendo-dropdownlist
             [data]="itemDropdownData"
             textField="ItemCode"
-            valueField="ItemCode" valueField="value"
-            [defaultItem]="defaultItem"
+            valueField="ItemCode"
+            [defaultItem]="{ItemCode:'Select ..'}"
             (valueChange)="onItemDropDownChange($event, rowIndex)">
 
           </kendo-dropdownlist>
@@ -105,7 +106,7 @@
               type="text"
               class="form-control"
               [formControl]="formGroup.get('ItemName')"
-              placeholder="ItemName"/>
+              />
           </ng-template>
 
         </kendo-grid-column>
@@ -125,11 +126,11 @@
               type="text"
               class="form-control"
               [formControl]="formGroup.get('PurchasePrice')"
-              placeholder="Purchase Price"/>
+              />
           </ng-template>
         </kendo-grid-column>
 
-        <kendo-grid-column field="Qty" title="Qty" [headerStyle]="{'text-align': 'right'}" [footerStyle]="{'text-align': 'right'}" [style]="{'text-align': 'right'}">    
+        <kendo-grid-column field="Qty" title="Qty" required="true" [headerStyle]="{'text-align': 'right'}" [footerStyle]="{'text-align': 'right'}" [style]="{'text-align': 'right'}">    
           <ng-template
             kendoGridCellTemplate
             let-dataItem="dataItem"
@@ -141,10 +142,10 @@
             let-dataItem="dataItem"
             let-rowIndex="rowIndex">
             <input
-              type="text"
+              type="number"
               class="form-control"
               [formControl]="formGroup.get('Qty')"
-              placeholder="Qty"
+              
               (change)="totalAmountCalculation($event, rowIndex)"/>
           </ng-template>
           <ng-template kendoGridFooterTemplate let-column="column">

@@ -9,6 +9,7 @@ import { OrderHistoryComponent } from './order-history/order-history.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GridModule } from '@progress/kendo-angular-grid';
 import { ChangeTextDirective } from './change-text.directive';
+import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ChangeTextDirective } from './change-text.directive';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    GridModule
+    GridModule,
+    DropDownsModule,
   ]
 })
 export class CustomersModule { }

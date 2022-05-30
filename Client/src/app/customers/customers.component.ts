@@ -3,8 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { GridComponent } from '@progress/kendo-angular-grid';
 import { CompositeFilterDescriptor, filterBy } from '@progress/kendo-data-query';
-import { demoData } from './data/data';
-
+import { forkJoin } from 'rxjs';
+import { DropDown } from '../core/models/drop-down.model';
+import { BaseApiService } from '../core/services/base-api.service';
 @Component({
   selector: 'app-customers',
   templateUrl: './customers.component.html',
@@ -20,14 +21,19 @@ export class CustomersComponent implements OnInit {
   public gridData: any[] =[];
   public originalData: any[] = [];
   public gridDemoData: any[] =[];
+  public upazilaDropdownData: any[] = [];
+  public villageDropdownData: any[] = [];
   public elPropertyName:string[]=[];
   public customerDataSource: any[] = [];
   public filter: CompositeFilterDescriptor;
+  public defaultItem: DropDown = new DropDown();
+  public villageData: any[] = [];
 
-  constructor(private fb:FormBuilder,private httpClient: HttpClient) { }
+  constructor(private fb:FormBuilder, private httpClient: HttpClient,  private apiService: BaseApiService) { }
 
   ngOnInit(): void {
     this.clear();
+    this.loadDropdowns();
     //this.gridDemoData = demoData;
     //this.elPropertyName = this.getPropertyNameArray(this.gridDemoData);
   }
@@ -41,6 +47,8 @@ export class CustomersComponent implements OnInit {
       Address2: new FormControl(''),
       City: new FormControl(''),
       Zip: new FormControl(''),
+      UpazilaId: new FormControl(0),
+      VillageId: new FormControl(0),
     });
   }
   save(){
@@ -88,6 +96,36 @@ export class CustomersComponent implements OnInit {
     )
   }
 
+  loadDropdowns() {
+    forkJoin([this.loadUpazilas(),this.loadVillages(),]).subscribe(
+      ([res1, res2]) => {
+        this.upazilaDropdownData = res1[`Data`];
+        this.villageDropdownData = res2 as any[];
+      },
+      (err) => {
+
+      }
+    )
+  }
+  loadUpazilas() {
+    return this.apiService.get('api/common/upazilas');
+  }
+  loadVillages() {
+    return this.apiService.get('api/common/villages');
+  }
+
+  public loadVillageByUpazila(item: any) {
+    this.frmCustomer.patchValue({
+      VillageId: null
+    });
+    if (item !== null) {
+      const upazilaId = this.frmCustomer.controls.UpazilaId.value;
+        return this.apiService.get(`api/common/villages?UpazilaId=${upazilaId}`).subscribe((res) => {
+          this.villageData = res[`Data`];
+        });;
+    }
+  }
+
   onRowEdit(customer: any){
     this.clearButtonText = "Clear";
     this.frmCustomer.patchValue({
@@ -98,6 +136,8 @@ export class CustomersComponent implements OnInit {
       Address2: customer.Address2,
       City: customer.City,
       Zip: customer.Zip,
+      UpazilaId: customer.UpazilaId,
+      VillageId: customer.VillageId,
     })
   }
 
