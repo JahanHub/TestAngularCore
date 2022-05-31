@@ -139,9 +139,10 @@ export class PurchaseComponent implements OnInit {
   }
 
   public createPurchaseDetailsFormGroup(dataItem: any = {}): FormGroup {
+    console.log(dataItem);
     return this.fb.group({
       Id: new FormControl(dataItem.Id ?? 0),
-      ItemCode: new FormControl(dataItem.ItemCode, Validators.required),
+      ItemId: new FormControl(dataItem.ItemId, Validators.required),
       ItemName: new FormControl(dataItem.ItemName, Validators.required),
       PurchasePrice: new FormControl(dataItem.PurchasePrice),
       Qty: new FormControl(dataItem.Qty ?? 0, Validators.required),
@@ -161,6 +162,7 @@ export class PurchaseComponent implements OnInit {
   public addHandler({ sender }: AddEvent): void {
     this.closeEditor(sender);
     this.formGroup = this.createPurchaseDetailsFormGroup();
+    console.log(this.formGroup);
     sender.addRow(this.formGroup);
   }
 
@@ -178,7 +180,7 @@ export class PurchaseComponent implements OnInit {
   public saveHandler({ sender, rowIndex, formGroup, isNew }: SaveEvent): void {
     const frmValue = formGroup.value;
 
-    const duplicateData = this.gridData.filter(i=> i.ItemCode == frmValue.ItemCode);
+    const duplicateData = this.gridData.filter(i=> i.ItemId == frmValue.ItemId);
     if (duplicateData.length > 0) {
       alert('Duplicate Found!')
       return;
@@ -248,9 +250,10 @@ export class PurchaseComponent implements OnInit {
   }
 
   onItemDropDownChange(e){
+    console.log(e);
     this.formGroup.patchValue({
       ItemName: e.ItemName,
-      ItemCode: e.ItemCode,
+      ItemId: e.Id,
       PurchasePrice: e.PurchasePrice,
       Qty: e.Qty
     });
@@ -273,6 +276,7 @@ loadPurchaseList() {
   return this.apiService.get('api/Purchase').subscribe(
     (res)=>{
       this.purchaseList = res as any[];
+      console.log(this.purchaseList);
     },
     (err)=>{
       
@@ -302,7 +306,7 @@ public mapItem(item: any) {
 
   this.gridData = item.PurchaseDetails;
   this.gridData.map((v,i)=>{
-    const index = this.itemDropdownData.filter(i=> i.ItemCode === v.ItemCode);
+    const index = this.itemDropdownData.filter(i=> i.ItemId === v.ItemId);
     const e= index[0];
     v.ItemName = e.ItemName;
     v.Amount = (v.Qty * v.PurchasePrice);

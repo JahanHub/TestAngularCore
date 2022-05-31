@@ -86,16 +86,29 @@ namespace TestApi.Controllers
         // POST: api/Purchases
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Purchase>> PostPurchase(Purchase Purchase)
+        public async Task<ActionResult<Purchase>> PostPurchase(Purchase purchase)
         {
-          if (_context.Purchases == null)
-          {
-              return Problem("Entity set 'AppDbContext.Purchases'  is null.");
-          }
-            _context.Purchases.Add(Purchase);
+            if (_context.Purchases == null)
+            {
+                return Problem("Entity set 'AppDbContext.Purchases'  is null.");
+            }
+            var stocks = new List<Stock>();
+            foreach (var item in purchase.PurchaseDetails)
+            {
+                var stock = _context.Stocks.FirstOrDefault(s => s.ItemId == item.ItemId);
+                if (stock == null)
+                {
+                    stock = new Stock()
+                    {
+                        StockQty = Convert.ToInt16(item.Qty),
+                        ItemId = item.ItemId
+                    };
+                }
+            }
+            _context.Purchases.Add(purchase);
             var result = await _context.SaveChangesAsync();
 
-            return Ok(Purchase);
+            return Ok(purchase);
         }
 
         // DELETE: api/Purchases/5

@@ -10,15 +10,16 @@ namespace TestApi.Contexts
 
         }
 
-        public DbSet<Customer> Customers { get; set; }
-        public DbSet<Item> Items { get; set; }
-        public DbSet<Supplier> Suppliers { get; set; }
-        public DbSet<Purchase> Purchases { get; set; }
-        public DbSet<PurchaseDetails> PurchaseDetails { get; set; }
+        public DbSet<Customer> Customers => Set<Customer>();
+        public DbSet<Item> Items => Set<Item>();
+        public DbSet<Supplier> Suppliers => Set<Supplier>();
+        public DbSet<Purchase> Purchases => Set<Purchase>();
+        public DbSet<PurchaseDetails> PurchaseDetails => Set<PurchaseDetails>();
         public DbSet<Sale> Sales => Set<Sale>();
         public DbSet<SaleDetails> SalesDetails => Set<SaleDetails>();
-        public DbSet<Upazila> Upazilas { get; set; }
-        public DbSet<Village> Villages { get; set; }
+        public DbSet<Upazila> Upazilas => Set<Upazila>();
+        public DbSet<Village> Villages => Set<Village>();
+        public DbSet<Stock> Stocks => Set<Stock>();
 
 
 

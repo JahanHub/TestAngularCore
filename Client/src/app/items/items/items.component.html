@@ -24,7 +24,33 @@
     <br>
     <br>
   
-    <kendo-grid [data]="gridData">
+    <kendo-grid [kendoGridBinding]="gridData" [filterable]="true" [pageSize]="3" [pageable]="true" [sortable]="true" [groupable]="true"
+    [selectable]="{enabled:true}"
+    [reorderable]="true" [resizable]="true" [height]="500">
+
+    <ng-template kendoGridToolbarTemplate>
+      <input
+        [style.width.px]="165"
+        placeholder="Search in all columns..."
+        kendoTextBox
+        (input)="onFilter($event)"
+      />
+      <kendo-grid-spacer></kendo-grid-spacer>
+      <button kendoGridExcelCommand type="button" icon="file-excel">
+        Export to Excel
+      </button>
+      <button kendoGridPDFCommand icon="file-pdf">Export to PDF</button>
+    </ng-template>
+
+    <kendo-grid-checkbox-column
+        [width]="45"
+        [headerClass]="{ 'text-center': true }"
+        [class]="{ 'text-center': true }"
+        [resizable]="false"
+        [columnMenu]="false"
+        [showSelectAll]="true"
+      ></kendo-grid-checkbox-column>
+
       <kendo-grid-column field="ItemCode" title="Item Code">
       </kendo-grid-column>
       <kendo-grid-column field="ItemName" title="Item Name">
@@ -33,12 +59,44 @@
       </kendo-grid-column>
       <kendo-grid-column field="SalesPrice" title="Sales Price">
       </kendo-grid-column>
+      <kendo-grid-column title="Status">
+        <ng-template kendoGridCellTemplate let-dataItem="dataItem" let-rowIndex="rowIndex">
+          <kendo-icon name="clip" size="medium"></kendo-icon>
+          <span>{{getAverage('SalesPrice') < dataItem.SalesPrice?'Above Average':'Below Average' }}</span>
+        </ng-template>
+      </kendo-grid-column>
       <kendo-grid-column title="Action">
         <ng-template kendoGridCellTemplate let-dataItem="dataItem" let-rowIndex="rowIndex">
           <button class="btn btn-primary" (click)="onRowEdit(dataItem)">Edit</button>
           <button class="btn btn-danger" (click)="onRowDelete(dataItem)">Delete</button>
         </ng-template>
       </kendo-grid-column>
+      <kendo-grid-pdf
+        fileName="Employees.pdf"
+        [repeatHeaders]="true"
+      >
+      <kendo-grid-pdf-margin
+      top="2cm"
+      left="1cm"
+      right="1cm"
+      bottom="2cm"
+    ></kendo-grid-pdf-margin>
+    <ng-template
+      kendoGridPDFTemplate
+      let-pageNum="pageNum"
+      let-totalPages="totalPages"
+    >
+      <div class="page-template">
+        <div class="header">
+          <div style="float: right">
+            Page {{ pageNum }} of {{ totalPages }}
+          </div>
+          Multi-page grid with automatic page breaking
+        </div>
+        <div class="footer">Page {{ pageNum }} of {{ totalPages }}</div>
+      </div>
+    </ng-template>
+  </kendo-grid-pdf>
     </kendo-grid>
   
   </form>

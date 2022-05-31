@@ -2,11 +2,12 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { GridComponent } from '@progress/kendo-angular-grid';
+import { SelectableSettings } from '@progress/kendo-angular-treeview';
 
 @Component({
   selector: 'app-items',
   templateUrl: './items.component.html',
-  //styleUrls: ['./items.component.css']
+  styleUrls: ["./pdf-style.css"],
 })
 export class ItemsComponent implements OnInit {
 
@@ -14,6 +15,11 @@ export class ItemsComponent implements OnInit {
 
   public grid: GridComponent;
   public gridData: any[] =[];
+  public mySelection: number[] = [];
+
+  public selectableSettings: SelectableSettings = {
+    enabled: false
+  };
 
   constructor(private fb:FormBuilder,private httpClient: HttpClient) { }
 
@@ -105,6 +111,12 @@ export class ItemsComponent implements OnInit {
   clear() {
     this.createFrmItem();
     this.getItem();
+  }
+
+  getAverage(columnName){
+   const total = this.gridData.reduce((previous,current)=> previous + current[columnName], 0);
+   const average =total/this.gridData.length;
+   return average;
   }
 
 }

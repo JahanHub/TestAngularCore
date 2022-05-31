@@ -127,6 +127,7 @@ export class CustomersComponent implements OnInit {
   }
 
   onRowEdit(customer: any){
+    console.log(customer);
     this.clearButtonText = "Clear";
     this.frmCustomer.patchValue({
       Id:customer.Id,

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TestApi.Contexts;
 
@@ -11,9 +12,10 @@ using TestApi.Contexts;
 namespace TestApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220531065244_StockTableAddedtoContext")]
+    partial class StockTableAddedtoContext
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -151,8 +153,10 @@ namespace TestApi.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("ItemId")
-                        .HasColumnType("int");
+                    b.Property<string>("ItemCode")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<int>("PurchaseId")
                         .HasColumnType("int");
@@ -167,8 +171,6 @@ namespace TestApi.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ItemId");
 
                     b.HasIndex("PurchaseId");
 
@@ -353,19 +355,11 @@ namespace TestApi.Migrations
 
             modelBuilder.Entity("TestApi.Models.PurchaseDetails", b =>
                 {
-                    b.HasOne("TestApi.Models.Item", "Item")
-                        .WithMany("PurchaseDetails")
-                        .HasForeignKey("ItemId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("TestApi.Models.Purchase", "Purchase")
                         .WithMany("PurchaseDetails")
                         .HasForeignKey("PurchaseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Item");
 
                     b.Navigation("Purchase");
                 });
@@ -394,8 +388,6 @@ namespace TestApi.Migrations
 
             modelBuilder.Entity("TestApi.Models.Item", b =>
                 {
-                    b.Navigation("PurchaseDetails");
-
                     b.Navigation("Stocks");
                 });
 

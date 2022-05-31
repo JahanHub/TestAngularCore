@@ -66,12 +66,12 @@
           </ng-template>
         </kendo-grid-column>
     
-        <kendo-grid-column field="ItemCode" title="Item Code">
+        <kendo-grid-column field="ItemId" title="Item">
           <ng-template
             kendoGridCellTemplate
             let-dataItem="dataItem"
             let-rowIndex="rowIndex">
-            <span>{{ dataItem.ItemCode }}</span>
+            <span>{{ dataItem.ItemId }}</span>
           </ng-template>
           <ng-template
             kendoGridEditTemplate
@@ -81,8 +81,8 @@
           <kendo-dropdownlist
             [data]="itemDropdownData"
             textField="ItemCode"
-            valueField="ItemCode"
-            [defaultItem]="{ItemCode:'Select ..'}"
+            valueField="Id"
+            [defaultItem]="{ItemCode:'Select ..',Id:0}"
             (valueChange)="onItemDropDownChange($event, rowIndex)">
 
           </kendo-dropdownlist>

@@ -18,7 +18,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PageNotFoundComponent,
     DashboardComponent
   ],
-  imports: [BrowserModule, AdminModule, CoreModule, AppRoutingModule, GridModule, BrowserAnimationsModule,HttpClientModule,FormsModule,ReactiveFormsModule],
+  imports: [
+    BrowserModule, 
+    AdminModule, 
+    CoreModule, 
+    AppRoutingModule, 
+    GridModule, 
+    BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

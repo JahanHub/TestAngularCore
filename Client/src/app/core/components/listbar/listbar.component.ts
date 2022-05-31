@@ -13,6 +13,7 @@ export class ListbarComponent implements OnInit {
   @Input() properties: ListBarProperties;
 
   @Output() select = new EventEmitter<any>();
+  public selectedIndex:number;
 
   constructor() { }
 
@@ -35,8 +36,10 @@ export class ListbarComponent implements OnInit {
     return output;
   }
 
-  onItemSelected(item){
+  onItemSelected(item,index){
     this.select.emit(item);
+    console.log(index);
+    this.selectedIndex = index;
   }
 
   // public isSelected(id) {

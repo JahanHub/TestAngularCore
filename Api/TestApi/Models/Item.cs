@@ -28,5 +28,8 @@ namespace TestApi.Models
         public DateTime CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
 
+        public virtual List<Stock> Stocks { get; set; } = new List<Stock>();
+        public virtual List<PurchaseDetails> PurchaseDetails { get; set; } = new List<PurchaseDetails>();
+
     }
 }
