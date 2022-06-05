@@ -71,8 +71,9 @@
           <button class="btn btn-danger" (click)="onRowDelete(dataItem)">Delete</button>
         </ng-template>
       </kendo-grid-column>
+      <kendo-grid-excel fileName="ItemList.xlsx"></kendo-grid-excel>
       <kendo-grid-pdf
-        fileName="Employees.pdf"
+        fileName="ItemList.pdf"
         [repeatHeaders]="true"
       >
       <kendo-grid-pdf-margin

@@ -162,7 +162,6 @@ export class PurchaseComponent implements OnInit {
   public addHandler({ sender }: AddEvent): void {
     this.closeEditor(sender);
     this.formGroup = this.createPurchaseDetailsFormGroup();
-    console.log(this.formGroup);
     sender.addRow(this.formGroup);
   }
 
@@ -179,8 +178,10 @@ export class PurchaseComponent implements OnInit {
 
   public saveHandler({ sender, rowIndex, formGroup, isNew }: SaveEvent): void {
     const frmValue = formGroup.value;
+    console.log(frmValue);
 
     const duplicateData = this.gridData.filter(i=> i.ItemId == frmValue.ItemId);
+    console.log('gridData: ',this.gridData);
     if (duplicateData.length > 0) {
       alert('Duplicate Found!')
       return;
@@ -233,7 +234,8 @@ export class PurchaseComponent implements OnInit {
     forkJoin([this.loadSuppliers(), this.loadItems()]).subscribe(
       ([res1, res2]) => {
         this.supplierDropdownData = res1[`Data`];
-        this.itemDropdownData = res2 as any[];
+        this.itemDropdownData = res2[`Data`] as any[];
+        console.log('res2: ',res2);
       },
       (err) => {
 
@@ -246,17 +248,29 @@ export class PurchaseComponent implements OnInit {
   }
 
   loadItems() {
-    return this.apiService.get('api/items');
+    return this.apiService.get('api/Common/items');
   }
 
   onItemDropDownChange(e){
-    console.log(e);
-    this.formGroup.patchValue({
-      ItemName: e.ItemName,
-      ItemId: e.Id,
-      PurchasePrice: e.PurchasePrice,
-      Qty: e.Qty
-    });
+    this.apiService.get('api/Items/'+ e.Value).subscribe(
+        (res)=>{
+        const itemData = res as any;
+        console.log(this.purchaseList);
+        this.formGroup.patchValue({
+          ItemName: itemData.ItemName,
+          ItemId: itemData.Id,
+          PurchasePrice: itemData.PurchasePrice,
+          Qty: itemData.Qty
+        });
+      },
+      (err)=>{
+        
+      },
+      ()=>{
+
+      }
+    );
+    
   }
 
 //   private loadPurchase(): void {
@@ -292,6 +306,7 @@ public itemSelected(item: any) {
     (res)=>{
       this.purchase = res;
       this.mapItem(this.purchase);
+      console.log(res);
     },
     (err)=>{
       //this.toastr.error('Error Occurred : ' + err, 'Error');
@@ -305,10 +320,11 @@ public itemSelected(item: any) {
 public mapItem(item: any) {
 
   this.gridData = item.PurchaseDetails;
+  const items = this.itemDropdownData;
   this.gridData.map((v,i)=>{
-    const index = this.itemDropdownData.filter(i=> i.ItemId === v.ItemId);
+    const index = items.filter(i=> i.Value === v.ItemId);
     const e= index[0];
-    v.ItemName = e.ItemName;
+    v.ItemName = e.Text;
     v.Amount = (v.Qty * v.PurchasePrice);
   });
   this.gridData = this.gridData;

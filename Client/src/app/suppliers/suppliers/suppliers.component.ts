@@ -23,7 +23,6 @@ export class SuppliersComponent implements OnInit {
   public defaultItem: DropDown = new DropDown();
   public formGroup: FormGroup;
   public villageData: any[] = [];
-  public subject = new BehaviorSubject(1);
   villageId: number;
   constructor(private fb:FormBuilder,private httpClient: HttpClient,  private apiService: BaseApiService) { }
 
@@ -31,15 +30,6 @@ export class SuppliersComponent implements OnInit {
     this.clear();
     this.elPropertyName = this.getPropertyNameArray(this.gridDemoData);
     this.loadDropdowns();
-    //this.loadVillageByUpazila();
-    this.subject.subscribe(
-      (res)=>{
-        // console.log(res);
-        // this.frmSupplier.patchValue({
-        //   VillageId: res,
-        // });
-      }
-    )
   }
 
   createFrmSupplier(){
@@ -119,7 +109,6 @@ export class SuppliersComponent implements OnInit {
   }
 
   public loadVillageByUpazila(item: any) {
-    console.log(item);
     this.frmSupplier.patchValue({
       VillageId: null
     });
@@ -127,16 +116,13 @@ export class SuppliersComponent implements OnInit {
       const upazilaId = item;
       this.apiService.get(`api/common/villages?UpazilaId=${upazilaId}`).subscribe((res) => {
           this.villageData = res[`Data`];
-          // this.subject.next(this.villageId);
       });;
     }
   }
 
   onRowEdit(supplier: any){
-    console.log(supplier);
     this.loadVillageByUpazila(supplier.UpazilaId);
     this.villageId = supplier.VillageId;
-    console.log(this.villageData);
     this.clearButtonText = "Clear";
     this.frmSupplier.patchValue({
       Id:supplier.Id,

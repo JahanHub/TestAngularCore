@@ -16,8 +16,9 @@ namespace TestApi.Models
         public decimal Qty { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
+        public int PurchaseId { get; set; }
 
-        public virtual Purchase Purchase { get; set; } = new Purchase();
-        public virtual Item Item { get; set; } = new Item();
+        public virtual Purchase? Purchase { get; set; }
+        public virtual Item? Item { get; set; }
     }
 }

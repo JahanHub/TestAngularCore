@@ -6,10 +6,6 @@ namespace TestApi.Models
     {
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Purchase ID is required Field")]
-        [Display(Name = "Pur Id")]
-        public int PurId { get; set; }
-
         [Required(ErrorMessage = "Purchase Date is required Field")]
         [Display(Name = "Purchase Date")]
         public DateTime PurDate { get; set; }

@@ -10,7 +10,7 @@ import { DropDown } from 'src/app/core/models/drop-down.model';
 @Component({
   selector: 'app-sales',
   templateUrl: './sales.component.html',
-  //styleUrls: ['./sales.component.css']
+  styleUrls: ['./sales.component.css']
 })
 export class SalesComponent implements OnInit {
 
@@ -140,7 +140,7 @@ export class SalesComponent implements OnInit {
   public createSalesDetailsFormGroup(dataItem: any = {}): FormGroup {
     return this.fb.group({
       Id: new FormControl(dataItem.Id ?? 0),
-      ItemCode: new FormControl(dataItem.ItemCode, Validators.required),
+      ItemId: new FormControl(dataItem.ItemId, Validators.required),
       ItemName: new FormControl(dataItem.ItemName, Validators.required),
       SalesPrice: new FormControl(dataItem.SalesPrice),
       Qty: new FormControl(dataItem.Qty ?? 0, Validators.required),
@@ -180,7 +180,7 @@ export class SalesComponent implements OnInit {
 
   public saveHandler({ sender, rowIndex, formGroup, isNew }: SaveEvent): void {
     const frmValue = formGroup.value;
-    const duplicateData = this.gridData.filter(i=> i.ItemCode == frmValue.ItemCode);
+    const duplicateData = this.gridData.filter(i=> i.ItemId == frmValue.ItemId);
     if (duplicateData.length > 0) {
       alert('Duplicate Found!')
       return;
@@ -233,7 +233,7 @@ export class SalesComponent implements OnInit {
     forkJoin([this.loadCustomers(), this.loadItems()]).subscribe(
       ([res1, res2]) => {
         this.customerDropdownData = res1[`Data`];
-        this.itemDropdownData = res2 as any[];
+        this.itemDropdownData = res2[`Data`] as any[];
       },
       (err) => {
 
@@ -246,18 +246,27 @@ export class SalesComponent implements OnInit {
   }
 
   loadItems() {
-    return this.apiService.get('api/items');
+    return this.apiService.get('api/Common/items');
   }
 
-  onItemDropDownChange(ev){
-    const index = this.itemDropdownData.filter(i=> i.ItemCode === ev);
-    const e= index[0];
-    this.formGroup.patchValue({
-      ItemCode: e.ItemCode,
-      ItemName: e.ItemName,
-      SalesPrice: e.SalesPrice,
-      Qty: e.Qty
-    });
+  onItemDropDownChange(e){
+    console.log(e);
+    this.apiService.get('api/Items/'+ e.Value).subscribe(
+        (res)=>{
+        const itemData = res as any;
+        console.log(itemData);
+        this.formGroup.patchValue({
+          ItemName: itemData.ItemName,
+          ItemId: itemData.Id,
+          SalesPrice: itemData.SalesPrice,
+          Qty: itemData.Qty
+        });
+      },
+      (err)=>{      
+      },
+      ()=>{
+      }
+    );   
   }
 
 loadSalesList() {
@@ -286,15 +295,15 @@ public itemSelected(item: any) {
       //this.toastr.error('Error Occurred : ' + err, 'Error');
     },
     ()=>{
-
     }
   )
 }
+
 public mapItem(item: any) {
 
   this.gridData = item.SaleDetails;
-  this.gridData.map((v,i)=>{
-    const index = this.itemDropdownData.filter(i=> i.ItemCode === v.ItemCode);
+  this.gridData.map((v)=>{
+    const index = this.itemDropdownData.filter(j=> j.Value === v.Id);
     const e= index[0];
     v.ItemName = e.ItemName;
     v.Amount = (v.Qty * v.SalesPrice);

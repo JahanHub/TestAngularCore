@@ -41,12 +41,21 @@ namespace TestApi.Common
                 .AsNoTracking()
                 .Select(i => new DropDown()
                 {
-                    Text = i.ItemCode,
+                    Text = i.Id + "-" + i.ItemCode + "-" + i.ItemName,
                     Value = i.Id
                 })
                 .ToListAsync(cancellationToken);
+            var header = new List<DropDown>();
+            header.Add(new DropDown()
+            {
+                Text = "Id - Item Code - Item Name",
+                Value = 0
+            });
+            header.AddRange(result);
+           
 
-            responseDetails.Data = result;
+
+            responseDetails.Data = header;
             responseDetails.Message = "Data Found successfully!";
             responseDetails.Count = result.Count;
             responseDetails.Exception = null;
@@ -103,7 +112,7 @@ namespace TestApi.Common
         {
             var responseDetails = new ResponseDetail<IEnumerable<DropDown>>();
 
-            var result = await _context.Villages.Where(t=>t.UpazilaId.Equals(upazilaId))
+            var result = await _context.Villages.Where(t => t.UpazilaId.Equals(upazilaId))
                 .AsNoTracking()
                 .Select(i => new DropDown()
                 {

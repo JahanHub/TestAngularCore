@@ -30,6 +30,7 @@ namespace TestApi.Models
 
         public virtual List<Stock> Stocks { get; set; } = new List<Stock>();
         public virtual List<PurchaseDetails> PurchaseDetails { get; set; } = new List<PurchaseDetails>();
+        public virtual List<SaleDetails> SaleDetails { get; set; } = new List<SaleDetails>();
 
     }
 }

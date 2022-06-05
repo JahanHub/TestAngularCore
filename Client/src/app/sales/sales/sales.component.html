@@ -57,6 +57,15 @@
           <button kendoGridAddCommand>Add new</button>
         </ng-template>
 
+        <kendo-grid-column title="S/N" width="50">
+          <ng-template kendoGridCellTemplate let-dataItem="dataItem" let-rowIndex="rowIndex">
+            {{ rowIndex + 1 }}
+          </ng-template>
+          <ng-template kendoGridEditTemplate let-dataItem="dataItem" let-rowIndex="rowIndex">
+              <span></span>
+          </ng-template>
+        </kendo-grid-column>
+
         <kendo-grid-column field="Id" [hidden]="true">
           <ng-template
             kendoGridEditTemplate
@@ -68,13 +77,13 @@
           </ng-template>
         </kendo-grid-column>
     
-        <kendo-grid-column field="ItemCode" title="Item Code">
+        <kendo-grid-column field="ItemId" title="Item">
           <ng-template
             kendoGridCellTemplate
             let-dataItem="dataItem"
             let-rowIndex="rowIndex"
             >
-            <span>{{ dataItem.ItemCode }}</span>
+            <span>{{ dataItem.ItemId }}</span>
           </ng-template>
 
           <ng-template
@@ -82,39 +91,31 @@
             let-dataItem="dataItem"
             let-rowIndex="rowIndex">
 
-          <kendo-dropdownlist
+          <kendo-dropdownlist class="k-dropdown"
             [data]="itemDropdownData"
-            textField="ItemCode"
-            valueField="ItemCode"
-            [formControl]="formGroup.get('ItemCode')"
-            [valuePrimitive]="true"
-            [defaultItem]="{ItemCode:'Select ..'}"
-            (valueChange)="onItemDropDownChange($event, rowIndex)">
+            textField="Text"
+            valueField="Value"
+            [defaultItem]="defaultItem"
+            (valueChange)="onItemDropDownChange($event)">
 
           </kendo-dropdownlist>
           </ng-template>
         </kendo-grid-column>
     
         <kendo-grid-column field="ItemName" title="Item Name">
-
           <ng-template
             kendoGridCellTemplate
             let-dataItem="dataItem"
             let-rowIndex="rowIndex">
             <span>{{ dataItem.ItemName }}</span>
           </ng-template>
-
           <ng-template
             kendoGridEditTemplate
             let-dataItem="dataItem"
             let-rowIndex="rowIndex">
-            <input
-              type="text"
-              class="form-control"
-              [formControl]="formGroup.get('ItemName')"
-              />
+            <input type="text" class="form-control"
+              [formControl]="formGroup.get('ItemName')"/>
           </ng-template>
-
         </kendo-grid-column>
 
         <kendo-grid-column field="SalesPrice" title="Sales Price" [headerStyle]="{'text-align': 'right'}" [footerStyle]="{'text-align': 'right'}" [style]="{'text-align': 'right'}">    

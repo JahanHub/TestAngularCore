@@ -28,6 +28,7 @@ export class CustomersComponent implements OnInit {
   public filter: CompositeFilterDescriptor;
   public defaultItem: DropDown = new DropDown();
   public villageData: any[] = [];
+  villageId: number;
 
   constructor(private fb:FormBuilder, private httpClient: HttpClient,  private apiService: BaseApiService) { }
 
@@ -119,15 +120,16 @@ export class CustomersComponent implements OnInit {
       VillageId: null
     });
     if (item !== null) {
-      const upazilaId = this.frmCustomer.controls.UpazilaId.value;
-        return this.apiService.get(`api/common/villages?UpazilaId=${upazilaId}`).subscribe((res) => {
+      const upazilaId = item;
+        this.apiService.get(`api/common/villages?UpazilaId=${upazilaId}`).subscribe((res) => {
           this.villageData = res[`Data`];
         });;
     }
   }
 
   onRowEdit(customer: any){
-    console.log(customer);
+    this.loadVillageByUpazila(customer.UpazilaId);
+    this.villageId = customer.VillageId;
     this.clearButtonText = "Clear";
     this.frmCustomer.patchValue({
       Id:customer.Id,

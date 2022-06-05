@@ -14,7 +14,9 @@ namespace TestApi.Models
         [Required(ErrorMessage = "Stock Qty is required Field")]
         [Display(Name = "Stock Qty")]
         public int StockQty { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public DateTime? UpdatedDate { get; set; }
 
-        public virtual Item Item { get; set; } = new Item();
+        public virtual Item? Item { get; set; }
     }
 }

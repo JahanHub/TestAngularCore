@@ -18,51 +18,63 @@ namespace TestApi.Controllers
 
         // GET: api/Purchases
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Purchase>>> GetPurchases()
+        public async Task<ActionResult<IEnumerable<PurchaseDto>>> GetPurchases()
         {
           if (_context.Purchases == null)
           {
               return NotFound();
           }
-            return await _context.Purchases.Include(k => k.PurchaseDetails).ToListAsync();
+            return await _context.Purchases.Select(i=> new PurchaseDto()
+            {
+                Id = i.Id,
+                PurDate = i.PurDate,
+                SupplierId = i.SupplierId,
+            }).ToListAsync();
         }
 
         // GET: api/Purchases/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Purchase>> GetPurchase(int id)
+        public async Task<ActionResult<PurchaseDto>> GetPurchase(int id)
         {
-          if (_context.Purchases == null)
-          {
-              return NotFound();
-          }
-            var purchase = await _context.Purchases.Include(j => j.PurchaseDetails).FirstOrDefaultAsync(i => i.Id == id);
+            if (_context.Purchases == null)
+            {
+                return NotFound();
+            }
+            var purchase = await _context.Purchases.Include(j=> j.PurchaseDetails)
+                            .FirstOrDefaultAsync(i => i.Id == id);
 
             if (purchase == null)
             {
                 return NotFound();
             }
+            var purchaseDto = new PurchaseDto(purchase);
 
-            return purchase;
+            return purchaseDto;
         }
 
         // PUT: api/Purchases/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutPurchase(int id, Purchase Purchase)
+        public async Task<IActionResult> PutPurchase(int id, PurchaseDto purchase, CancellationToken cancellationToken = default)
         {
-            if (id != Purchase.Id)
+            if (id != purchase.Id)
             {
                 return BadRequest();
             }
-            var existingData = _context.PurchaseDetails.AsNoTracking().Where(i => i.Purchase.Id == Purchase.Id).ToList();
+            var existingData = _context.PurchaseDetails.AsNoTracking().Where(i => i.Purchase.Id == purchase.Id).ToList();
             if (existingData.Count>0)
             {
-                var allExistingIds = Purchase.PurchaseDetails.Where(i => i.Id > 0).Select(p => p.Id).ToList();
+                var allExistingIds = purchase.PurchaseDetails.Where(i => i.Id > 0).Select(p => p.Id).ToList();
                 var deletedDetails = existingData.Where(i => !allExistingIds.Contains(i.Id)).ToList();
                 _context.PurchaseDetails.RemoveRange(deletedDetails);
             }
+            var purchaseInDb = await _context.Purchases.AsNoTracking().Include(j=> j.PurchaseDetails).FirstOrDefaultAsync(i => i.Id == purchase.Id);
+            if (purchaseInDb == null)
+            {
+                return NotFound();
+            }
 
-            _context.Purchases.Update(Purchase);
+            _context.Purchases.Update(purchase.GetPurchase(purchaseInDb));
 
             try
             {
@@ -86,29 +98,43 @@ namespace TestApi.Controllers
         // POST: api/Purchases
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Purchase>> PostPurchase(Purchase purchase)
+        public async Task<ActionResult<PurchaseDto>> PostPurchase(PurchaseDto purchase, CancellationToken cancellationToken = default)
         {
-            if (_context.Purchases == null)
+            try
             {
-                return Problem("Entity set 'AppDbContext.Purchases'  is null.");
-            }
-            var stocks = new List<Stock>();
-            foreach (var item in purchase.PurchaseDetails)
-            {
-                var stock = _context.Stocks.FirstOrDefault(s => s.ItemId == item.ItemId);
-                if (stock == null)
+                if (_context.Purchases == null)
                 {
-                    stock = new Stock()
-                    {
-                        StockQty = Convert.ToInt16(item.Qty),
-                        ItemId = item.ItemId
-                    };
+                    return Problem("Entity set 'AppDbContext.Purchases'  is null.");
                 }
-            }
-            _context.Purchases.Add(purchase);
-            var result = await _context.SaveChangesAsync();
+                var stocks = new List<Stock>();
+                foreach (var item in purchase.PurchaseDetails)
+                {
+                    var stock = await _context.Stocks.FirstOrDefaultAsync(s => s.ItemId == item.ItemId, cancellationToken);
+                    if (stock == null)
+                    {
+                        stock = new Stock()
+                        {
+                            StockQty = Convert.ToInt16(item.Qty),
+                            ItemId = item.ItemId
+                        };
+                    }
+                    else
+                    {
+                        stock.StockQty += Convert.ToInt16(item.Qty);
+                    }
+                    stocks.Add(stock);
+                }
+                _context.Stocks.UpdateRange(stocks);
+                var abc = purchase.GetPurchase();
+                _context.Purchases.Add(abc);
+                var result = await _context.SaveChangesAsync(cancellationToken);
 
-            return Ok(purchase);
+                return Ok(purchase);
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
 
         // DELETE: api/Purchases/5
