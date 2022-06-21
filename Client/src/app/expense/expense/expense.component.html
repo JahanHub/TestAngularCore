@@ -1,23 +1,37 @@
 <form [formGroup]="frmExpense">
     <div class="form-row">
         <div class="form-group col-md-3">
-            <label for="ExId">Id</label>
-            <input type="text" class="form-control" id="ExId" formControlName="ExId">
+            <label for="Id">Id</label>
+            <input type="text" class="form-control" id="Id" formControlName="Id">
         </div>
         <div class="form-group col-md-3">
             <label for="IdExpenseHead">Expense Head</label>
-            <input type="text" class="form-control" id="IdExpenseHead" formControlName="IdExpenseHead">
+            <kendo-dropdownlist [data]="expenseHeadDropdownData"
+            [valuePrimitive]="true" (valueChange)="loadElementByHead($event)"
+            textField="Text"
+            valueField="Value"
+            [defaultItem]="defaultItem"
+            formControlName="IdExpenseHead">
+            </kendo-dropdownlist>
         </div>
+
         <div class="form-group col-md-3">
             <label for="IdExpenseElement">Expense Element</label>
-            <input type="text" class="form-control" id="IdExpenseElement" formControlName="IdExpenseElement">
+            <kendo-dropdownlist [data]="expenseElementDropdownData"
+            [valuePrimitive]="true"
+            textField="Text"
+            valueField="Value"
+            [defaultItem]="defaultItem"
+            formControlName="IdExpenseElement">
+            </kendo-dropdownlist>
         </div>
     </div>
     <div class="form-row">
         <div class="form-group col-md-3">
             <label for="ExpenseDate">Expense Date</label>
-            <input type="text" class="form-control" id="ExpenseDate" formControlName="ExpenseDate">
-        </div>
+            <kendo-datepicker [format]="'yyyy-MM-dd'" id="ExpenseDate" name="ExpenseDate" formControlName="ExpenseDate">
+            </kendo-datepicker>
+          </div>
         <div class="form-group col-md-3">
             <label for="PayTo">PayTo</label>
             <input type="text" class="form-control" id="PayTo" formControlName="PayTo">
@@ -56,7 +70,7 @@
             [class]="{ 'text-center': true }" [resizable]="false" [columnMenu]="false" [showSelectAll]="true">
         </kendo-grid-checkbox-column>
 
-        <kendo-grid-column field="ExId" title="Expense Id">
+        <kendo-grid-column field="Id" title="Expense Id">
         </kendo-grid-column>
         <kendo-grid-column field="IdExpenseHead" title="Expense Head">
         </kendo-grid-column>

@@ -20,7 +20,9 @@ namespace TestApi.Contexts
         public DbSet<Upazila> Upazilas => Set<Upazila>();
         public DbSet<Village> Villages => Set<Village>();
         public DbSet<Stock> Stocks => Set<Stock>();
-
+        public DbSet<Expense> Expenses => Set<Expense>();
+        public DbSet<ExpenseHead> ExpenseHeads => Set<ExpenseHead>();
+        public DbSet<ExpenseElement> ExpenseElements => Set<ExpenseElement>();
 
 
         public override int SaveChanges()

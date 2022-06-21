@@ -5,6 +5,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ExcelModule, GridModule, PDFModule } from '@progress/kendo-angular-grid';
 import { ExpenseRoutingModule } from './expense-routing.module';
 import { ExpenseComponent } from './expense/expense.component';
+import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
 
 @NgModule({
   declarations: [ExpenseComponent],
@@ -16,7 +18,9 @@ import { ExpenseComponent } from './expense/expense.component';
     HttpClientModule,
     GridModule,
     PDFModule,
-    ExcelModule
+    ExcelModule,
+    DropDownsModule,
+    DateInputsModule
   ]
 })
 export class ExpenseModule { }

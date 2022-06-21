@@ -129,5 +129,48 @@ namespace TestApi.Common
             responseDetails.Success = true;
             return responseDetails;
         }
+
+        public async Task<ResponseDetail<IEnumerable<DropDown>>> GetExpenseHeadDropDowns(CancellationToken cancellationToken = default)
+        {
+            var responseDetails = new ResponseDetail<IEnumerable<DropDown>>();
+
+            var result = await _context.ExpenseHeads
+                .AsNoTracking()
+                .Select(i => new DropDown()
+                {
+                    Text = i.Name,
+                    Value = i.Id
+                })
+                .ToListAsync(cancellationToken);
+
+            responseDetails.Data = result;
+            responseDetails.Message = "Data Found successfully!";
+            responseDetails.Count = result.Count;
+            responseDetails.Exception = null;
+            responseDetails.MessageType = MessageType.Success;
+            responseDetails.Success = true;
+            return responseDetails;
+        }
+        public async Task<ResponseDetail<IEnumerable<DropDown>>> GetExpenseElementDropDowns(int idExpenseHead, CancellationToken cancellationToken = default)
+        {
+            var responseDetails = new ResponseDetail<IEnumerable<DropDown>>();
+
+            var result = await _context.ExpenseElements.Where(t => t.IdExpenseHead.Equals(idExpenseHead))
+                .AsNoTracking()
+                .Select(i => new DropDown()
+                {
+                    Text = i.Name,
+                    Value = i.Id
+                })
+                .ToListAsync(cancellationToken);
+
+            responseDetails.Data = result;
+            responseDetails.Message = "Data Found successfully!";
+            responseDetails.Count = result.Count;
+            responseDetails.Exception = null;
+            responseDetails.MessageType = MessageType.Success;
+            responseDetails.Success = true;
+            return responseDetails;
+        }
     }
 }

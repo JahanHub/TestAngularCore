@@ -57,5 +57,21 @@ namespace TestApi.Controllers
 
             return drpItems;
         }
+
+        [HttpGet("expenseheads")]
+        public async Task<ActionResult<ResponseDetail<IEnumerable<DropDown>>>> GetExpenseHeads()
+        {
+            var drpItems = await _commonApi.GetExpenseHeadDropDowns();
+
+            return drpItems;
+        }
+        [HttpGet("expenseelements")]
+        public async Task<ActionResult<ResponseDetail<IEnumerable<DropDown>>>> GetExpenseElements([FromQuery] int idExpenseHead)
+        {
+            var drpItems = await _commonApi.GetExpenseElementDropDowns(idExpenseHead);
+
+            return drpItems;
+        }
+
     }
 }

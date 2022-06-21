@@ -7,5 +7,7 @@
         Task<ResponseDetail<IEnumerable<DropDown>>> GetSupplierDropDowns(CancellationToken cancellationToken = default);
         Task<ResponseDetail<IEnumerable<DropDown>>> GetUpazilaDropDowns(CancellationToken cancellationToken = default);
         Task<ResponseDetail<IEnumerable<DropDown>>> GetVillageDropDowns(int updazilaId, CancellationToken cancellationToken = default);
+        Task<ResponseDetail<IEnumerable<DropDown>>> GetExpenseHeadDropDowns(CancellationToken cancellationToken = default);
+        Task<ResponseDetail<IEnumerable<DropDown>>> GetExpenseElementDropDowns(int idExpenseHead, CancellationToken cancellationToken = default);
     }
 }

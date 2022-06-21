@@ -1,8 +1,12 @@
+import { DatePipe, formatDate } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { GridComponent } from '@progress/kendo-angular-grid';
 import { SelectableSettings } from '@progress/kendo-angular-treeview';
+import { forkJoin } from 'rxjs';
+import { DropDown } from 'src/app/core/models/drop-down.model';
+import { BaseApiService } from 'src/app/core/services/base-api.service';
 import { Expense } from 'src/app/models/expense';
 
 @Component({
@@ -15,7 +19,10 @@ export class ExpenseComponent implements OnInit {
 
   public grid: GridComponent;
   public gridData: any[] =[];
+  private cd: Date = new Date();
   public mySelection: number[] = [];
+  public expenseHeadDropdownData: any[] = [];
+  public expenseElementDropdownData: any[] = [];
   public imagePath;
   imgURL: any;
   public message: string;
@@ -24,23 +31,26 @@ export class ExpenseComponent implements OnInit {
 
   public selectedFileString: string;
   public selectedFileName: string;
+  private datepipe: DatePipe;
+  public defaultItem: DropDown = new DropDown();
 
   public selectableSettings: SelectableSettings = {
     enabled: false
   };
 
-  constructor(private fb:FormBuilder,private httpClient: HttpClient) { }
+  constructor(private fb:FormBuilder,private httpClient: HttpClient,  private apiService: BaseApiService) { }
 
   ngOnInit(): void {
     this.clear();
+    this.loadAllExpenseDropdowns();
   }
 
-  createfrmExpense(){
+  createFrmExpense(dataItem: any ={}){
     this.frmExpense = this.fb.group({
-      ExId: new FormControl(0),
+      Id: new FormControl(0),
       IdExpenseHead: new FormControl(''),
       IdExpenseElement: new FormControl(''),
-      ExpenseDate: new FormControl(''),
+      ExpenseDate: new FormControl(dataItem.ExpenseDate?new Date(formatDate(dataItem.ExpenseDate,'yyyy-MM-dd','en')) :new Date()),
       PayTo: new FormControl(''),
       Remarks: new FormControl(''),
       Amount: new FormControl(''),
@@ -51,7 +61,7 @@ export class ExpenseComponent implements OnInit {
 
     let fd = new FormData();
 
-    fd.append("ExId", expense.ExId.toString());
+    fd.append("Id", expense.Id.toString());
     fd.append("IdExpenseHead", expense.IdExpenseHead.toString());
     fd.append("IdExpenseElement", expense.IdExpenseElement.toString());
     fd.append("ExpenseDate", expense.ExpenseDate.toString());
@@ -59,8 +69,8 @@ export class ExpenseComponent implements OnInit {
     fd.append("Remarks", expense.Remarks.toString());
     fd.append("Amount", expense.Amount.toString());
     
-    if(expense.ExId && expense.ExId > 0){
-      this.httpClient.put('http://localhost:5138/api/Expense/'+expense.ExId ,fd).subscribe(
+    if(expense.Id && expense.Id > 0){
+      this.httpClient.put('http://localhost:5138/api/Expense/'+expense.Id ,fd).subscribe(
         (res)=>{
           this.clear();
         },
@@ -103,7 +113,7 @@ export class ExpenseComponent implements OnInit {
 
   onRowEdit(expense: any){
     this.frmExpense.patchValue({
-      ExId:expense.ExId,
+      Id:expense.Id,
       IdExpenseHead:expense.IdExpenseHead,
       IdExpenseElement:expense.IdExpenseElement,
       ExpenseDate: expense.ExpenseDate,
@@ -116,7 +126,7 @@ export class ExpenseComponent implements OnInit {
 
   onRowDelete(expense: any){
     if(confirm('Are You Sure?')){
-      this.httpClient.delete('http://localhost:5138/api/Expense/'+ expense.ExId).subscribe(
+      this.httpClient.delete('http://localhost:5138/api/Expense/'+ expense.Id).subscribe(
       (res)=>{
         this.clear();
       },
@@ -131,7 +141,7 @@ export class ExpenseComponent implements OnInit {
   }
 
   clear() {
-    this.createfrmExpense();
+    this.createFrmExpense();
     this.getExpense();
   }
 
@@ -140,4 +150,37 @@ export class ExpenseComponent implements OnInit {
    const average =total/this.gridData.length;
    return average;
   }
+
+  loadExpenseHead() {
+    return this.apiService.get('api/common/expenseheads');
+  }
+  loadExpenseElement() {
+    return this.apiService.get('api/common/expenseelements');
+  }
+
+  loadAllExpenseDropdowns() {
+    forkJoin([this.loadExpenseElement(), this.loadExpenseHead()]).subscribe(
+      ([res1, res2]) => {
+        this.expenseElementDropdownData = res1[`Data`];
+        this.expenseHeadDropdownData = res2[`Data`] as any[];
+        console.log('res2: ',res2);
+      },
+      (err) => {
+
+      }
+    )
+  }
+
+  public loadElementByHead(item: any) {
+    this.frmExpense.patchValue({
+      IdExpenseElement: null
+    });
+    if (item !== null) {
+      const IdExpenseHead = item;
+        this.apiService.get(`api/common/expenseelements?IdExpenseHead=${IdExpenseHead}`).subscribe((res) => {
+          this.expenseElementDropdownData = res[`Data`];
+        });;
+    }
+  }
+
 }

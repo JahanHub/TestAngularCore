@@ -1,6 +1,6 @@
 export class Expense {
     constructor() { }
-    ExId: Number;
+    Id: Number;
     IdExpenseHead: Number;
     IdExpenseElement: Number;
     ExpenseDate : Date;
