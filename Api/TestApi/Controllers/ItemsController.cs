@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TestApi.Contexts;
+using TestApi.Helper;
 using TestApi.Models;
 
 namespace TestApi.Controllers
@@ -84,17 +80,29 @@ namespace TestApi.Controllers
         // POST: api/Items
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Item>> PostItem(Item item)
+        public async Task<ActionResult<Item>> PostItem([FromForm] ItemDto itemDto)
         {
           if (_context.Items == null)
           {
               return Problem("Entity set 'AppDbContext.Items'  is null.");
           }
+            var item = new Item()
+            {
+                Id = itemDto.Id,
+                ItemCode = itemDto.ItemCode,
+                ItemName = itemDto.ItemName,
+                PurchasePrice = itemDto.PurchasePrice,
+                SalesPrice = itemDto.SalesPrice,
+                Photo = FileHandler.ConvertToByte(itemDto.Photo),
+            };
             _context.Items.Add(item);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetItem", new { id = item.Id }, item);
+
+
         }
+
 
         // DELETE: api/Items/5
         [HttpDelete("{id}")]

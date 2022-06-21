@@ -24,7 +24,7 @@ namespace TestApi.Models
         [Required(ErrorMessage = "Sales Price is required Field")]
         [Display(Name = "Sales Price")]
         public decimal SalesPrice { get; set; }
-
+        public byte[] Photo { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
 

@@ -164,13 +164,11 @@ export class SalesComponent implements OnInit {
 
   public editHandler({ sender, rowIndex, dataItem }: EditEvent): void {
     this.closeEditor(sender);
-    const index = this.itemDropdownData.filter(i=> i.ItemCode === dataItem.ItemCode);
-    const e= index[0];
-    dataItem.ItemName = e.ItemName;
+    // const index = this.itemDropdownData.filter(i=> i.ItemCode === dataItem.ItemCode);
+    // const e= index[0];
+    // dataItem.ItemName = e.ItemName;
     this.formGroup = this.createSalesDetailsFormGroup(dataItem);
-
     this.editedRowIndex = rowIndex;
-
     sender.editRow(rowIndex, this.formGroup);
   }
 

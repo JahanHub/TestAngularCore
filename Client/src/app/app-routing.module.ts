@@ -18,6 +18,7 @@ const routes: Routes = [
       { path: 'orders', loadChildren: () => import('./orders/orders.module').then((m) => m.OrdersModule), },
       { path: '', redirectTo: '', pathMatch: 'full' },
       { path: 'admin', loadChildren: () => import('./admin/admin.module').then((m) => m.AdminModule), },
+      { path: 'expense', loadChildren: () => import('./expense/expense.module').then((m) => m.ExpenseModule), },
       //{ path: 'login', loadChildren: () => import('./login/login.module').then((m) => m.AdminModule), },
               ],},
   { path: '**', component: PageNotFoundComponent },

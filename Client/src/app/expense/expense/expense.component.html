@@ -1,0 +1,112 @@
+<form [formGroup]="frmExpense">
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <label for="ExId">Id</label>
+            <input type="text" class="form-control" id="ExId" formControlName="ExId">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="IdExpenseHead">Expense Head</label>
+            <input type="text" class="form-control" id="IdExpenseHead" formControlName="IdExpenseHead">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="IdExpenseElement">Expense Element</label>
+            <input type="text" class="form-control" id="IdExpenseElement" formControlName="IdExpenseElement">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <label for="ExpenseDate">Expense Date</label>
+            <input type="text" class="form-control" id="ExpenseDate" formControlName="ExpenseDate">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="PayTo">PayTo</label>
+            <input type="text" class="form-control" id="PayTo" formControlName="PayTo">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="Remarks">Remarks</label>
+            <input type="text" class="form-control" id="Remarks" formControlName="Remarks">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="Amount">Amount</label>
+            <input type="text" class="form-control" id="Amount" formControlName="Amount">
+        </div>
+    </div>
+
+    <button (click)="save()" class="btn btn-primary">Save</button> &nbsp;
+    <button (click)="clear()" class="btn btn-primary">Clear</button>
+
+    <br>
+    <br>
+
+    <kendo-grid [kendoGridBinding]="gridData" [filterable]="true" [pageSize]="3" [pageable]="true" [sortable]="true"
+        [groupable]="true" [selectable]="{enabled:true}" [navigable]="true" [reorderable]="true" [resizable]="true"
+        [height]="500">
+
+        <ng-template kendoGridToolbarTemplate>
+            <input [style.width.px]="165" placeholder="Search in all columns..." kendoTextBox
+                (input)="onFilter($event)" />
+            <kendo-grid-spacer></kendo-grid-spacer>
+            <button kendoGridExcelCommand type="button" icon="file-excel">
+                Export to Excel
+            </button>
+            <button kendoGridPDFCommand icon="file-pdf">Export to PDF</button>
+        </ng-template>
+
+        <kendo-grid-checkbox-column [width]="45" [headerClass]="{ 'text-center': true }"
+            [class]="{ 'text-center': true }" [resizable]="false" [columnMenu]="false" [showSelectAll]="true">
+        </kendo-grid-checkbox-column>
+
+        <kendo-grid-column field="ExId" title="Expense Id">
+        </kendo-grid-column>
+        <kendo-grid-column field="IdExpenseHead" title="Expense Head">
+        </kendo-grid-column>
+        <kendo-grid-column field="IdExpenseElement" title="Expense Element">
+        </kendo-grid-column>
+        <kendo-grid-column field="ExpenseDate" title="Expense Date">
+        </kendo-grid-column>
+        <kendo-grid-column field="PayTo" title="Pay To">
+        </kendo-grid-column>
+        <kendo-grid-column field="Remarks" title="Remarks">
+        </kendo-grid-column>
+        <kendo-grid-column field="Amount" title="Amount">
+        </kendo-grid-column>
+
+        <kendo-grid-column title="Action">
+            <ng-template kendoGridCellTemplate let-dataItem="dataItem" let-rowIndex="rowIndex">
+                <button class="btn btn-primary" (click)="onRowEdit(dataItem)">Edit</button>
+                <button class="btn btn-danger" (click)="onRowDelete(dataItem)">Delete</button>
+            </ng-template>
+        </kendo-grid-column>
+
+        <kendo-grid-excel fileName="ExpenseList.xlsx"></kendo-grid-excel>
+
+        <kendo-grid-pdf fileName="ExpenseList.pdf">
+            <kendo-grid-pdf-margin top="2cm" left="1cm" right="1cm" bottom="2cm">
+            </kendo-grid-pdf-margin>
+            <ng-template kendoGridPDFTemplate let-pageNum="pageNum" let-totalPages="totalPages">
+                <div class="page-template">
+                    <div class="header">
+                        <div style="float: right">
+                            Page {{ pageNum }} of {{ totalPages }}
+                        </div>
+                        Multi-page grid with automatic page breaking
+                    </div>
+                    <div class="footer">Page {{ pageNum }} of {{ totalPages }}</div>
+                </div>
+            </ng-template>
+        </kendo-grid-pdf>
+
+        <!-- *************** Expense Element will show by Expense Head in grid ****************-->
+
+        <!-- <div *kendoGridDetailTemplate="let dataItem">
+            <kendo-grid [data]="dataItem.datadetails" [scrollable]="true" [navigable]="true" kendoGridFocusable>
+                <kendo-grid-column field="itemCode" width="80" title="Code">
+                </kendo-grid-column>
+                <kendo-grid-column field="itemDescription1" title="Description">
+                </kendo-grid-column>
+            </kendo-grid>
+        </div> -->
+
+    </kendo-grid>
+
+</form>

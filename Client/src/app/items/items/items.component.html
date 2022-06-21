@@ -2,21 +2,39 @@
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="itemCode">Item Code</label>
-        <input type="text" class="form-control" id="itemCode" formControlName="ItemCode" placeholder="Item Code">
+        <input type="text" class="form-control" id="itemCode" formControlName="ItemCode">
       </div>
       <div class="form-group col-md-6">
         <label for="itemName">Item Name</label>
-        <input type="text" class="form-control" id="itemName" formControlName="ItemName" placeholder="Item Name">
+        <input type="text" class="form-control" id="itemName" formControlName="ItemName">
       </div>
     </div>
-    <div class="form-group">
+    <div class="form-row">
+    <div class="form-group col-md-4">
       <label for="purchasePrice">Purchase Price</label>
-      <input type="text" class="form-control" id="purchasePrice" formControlName="PurchasePrice" placeholder="Purchase Price">
+      <input type="text" class="form-control" id="purchasePrice" formControlName="PurchasePrice">
     </div>
-    <div class="form-group">
+    <div class="form-group col-md-4">
       <label for="salesPrice">Sales Price</label>
-      <input type="text" class="form-control" id="salesPrice" formControlName="SalesPrice" placeholder="Sales Price">
+      <input type="text" class="form-control" id="salesPrice" formControlName="SalesPrice">
     </div>
+
+    <div class="form-group col-md-4">
+      <label for="photo">Photo</label>
+      <div class="form-group">
+        <!-- <input type="file" name="file" id="file" (change)="onFileChanged($event)" /> -->
+        <span style="color:red;" *ngIf="message">{{message}}</span>
+        <input #file type="file" accept='image/*' (change)="onImageSelected($event)" formControlName="Photo" />
+        <img [src]="imgURL" height="200" *ngIf="imgURL">
+      </div>
+      
+
+
+    </div>
+  </div>
+
+
+
 
     <button (click)="save()" class="btn btn-primary">Save</button> &nbsp;
     <button (click)="clear()" class="btn btn-primary">Clear</button>
@@ -25,7 +43,7 @@
     <br>
   
     <kendo-grid [kendoGridBinding]="gridData" [filterable]="true" [pageSize]="3" [pageable]="true" [sortable]="true" [groupable]="true"
-    [selectable]="{enabled:true}"
+    [selectable]="{enabled:true}" [navigable]="true"
     [reorderable]="true" [resizable]="true" [height]="500">
 
     <ng-template kendoGridToolbarTemplate>
@@ -59,6 +77,15 @@
       </kendo-grid-column>
       <kendo-grid-column field="SalesPrice" title="Sales Price">
       </kendo-grid-column>
+
+      <kendo-grid-column>
+        <ng-template kendoGridCellTemplate let-dataItem="dataItem" let-rowIndex="rowIndex">
+            <!-- <img src="{{ './assets/profiles/patients/' + dataItem.ItemCode + '.jpg' }}" 
+                    onerror=" this.src = './assets/profiles/patients/0.jpg' "
+                    height="40" width="40" style="border-radius:30px;" alt="Item Image"/>                     -->
+            </ng-template>
+     </kendo-grid-column>
+
       <kendo-grid-column title="Status">
         <ng-template kendoGridCellTemplate let-dataItem="dataItem" let-rowIndex="rowIndex">
           <kendo-icon name="clip" size="medium"></kendo-icon>
@@ -98,6 +125,22 @@
       </div>
     </ng-template>
   </kendo-grid-pdf>
+
+
+  <div *kendoGridDetailTemplate="let dataItem">
+    <kendo-grid
+          [data]="dataItem.datadetails"
+          [scrollable]="true"
+          [navigable]="true"
+          kendoGridFocusable
+        >
+        <kendo-grid-column field="itemCode" width="80" title="Code">
+        </kendo-grid-column>
+        <kendo-grid-column field="itemDescription1" title="Description">
+        </kendo-grid-column>
+        </kendo-grid>
+  </div>
+  
     </kendo-grid>
   
   </form>
