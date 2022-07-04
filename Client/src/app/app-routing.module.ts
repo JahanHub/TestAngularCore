@@ -19,6 +19,7 @@ const routes: Routes = [
       { path: '', redirectTo: '', pathMatch: 'full' },
       { path: 'admin', loadChildren: () => import('./admin/admin.module').then((m) => m.AdminModule), },
       { path: 'expense', loadChildren: () => import('./expense/expense.module').then((m) => m.ExpenseModule), },
+      { path: 'samplereport', loadChildren: () => import('./reports/report.module').then((m) => m.ReportModule), },
       //{ path: 'login', loadChildren: () => import('./login/login.module').then((m) => m.AdminModule), },
               ],},
   { path: '**', component: PageNotFoundComponent },

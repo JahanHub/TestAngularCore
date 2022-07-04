@@ -113,6 +113,10 @@ namespace TestApi.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("IdExpenseElement");
+
+                    b.HasIndex("IdExpenseHead");
+
                     b.ToTable("Expenses");
                 });
 
@@ -434,6 +438,25 @@ namespace TestApi.Migrations
                     b.ToTable("Villages");
                 });
 
+            modelBuilder.Entity("TestApi.Models.Expense", b =>
+                {
+                    b.HasOne("TestApi.Models.ExpenseElement", "ExpenseElement")
+                        .WithMany("Expenses")
+                        .HasForeignKey("IdExpenseElement")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TestApi.Models.ExpenseHead", "ExpenseHead")
+                        .WithMany("Expenses")
+                        .HasForeignKey("IdExpenseHead")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ExpenseElement");
+
+                    b.Navigation("ExpenseHead");
+                });
+
             modelBuilder.Entity("TestApi.Models.PurchaseDetails", b =>
                 {
                     b.HasOne("TestApi.Models.Item", "Item")
@@ -481,6 +504,16 @@ namespace TestApi.Migrations
                         .IsRequired();
 
                     b.Navigation("Item");
+                });
+
+            modelBuilder.Entity("TestApi.Models.ExpenseElement", b =>
+                {
+                    b.Navigation("Expenses");
+                });
+
+            modelBuilder.Entity("TestApi.Models.ExpenseHead", b =>
+                {
+                    b.Navigation("Expenses");
                 });
 
             modelBuilder.Entity("TestApi.Models.Item", b =>

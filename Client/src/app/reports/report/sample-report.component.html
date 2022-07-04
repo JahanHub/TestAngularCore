@@ -1,0 +1,45 @@
+<form [formGroup]="frmSampleReport">
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <label for="Id">Id</label>
+            <input type="text" class="form-control" id="Id" formControlName="Id">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="IdExpenseHead">Expense Head</label>
+            <kendo-dropdownlist [data]="expenseHeadDropdownData"
+            [valuePrimitive]="true" (valueChange)="loadElementByHead($event)"
+            textField="Text"
+            valueField="Value"
+            [defaultItem]="defaultItem"
+            formControlName="IdExpenseHead">
+            </kendo-dropdownlist>
+        </div>
+
+        <div class="form-group col-md-3">
+            <label for="IdExpenseElement">Expense Element</label>
+            <kendo-dropdownlist [data]="expenseElementDropdownData"
+            [valuePrimitive]="true"
+            textField="Text"
+            valueField="Value"
+            [defaultItem]="defaultItem"
+            formControlName="IdExpenseElement">
+            </kendo-dropdownlist>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <label for="ExpenseDate">Expense Date</label>
+            <kendo-datepicker [format]="'yyyy-MM-dd'" id="ExpenseDate" name="ExpenseDate" formControlName="ExpenseDate">
+            </kendo-datepicker>
+          </div>
+        <div class="form-group col-md-3">
+            <label for="PayTo">PayTo</label>
+            <input type="text" class="form-control" id="PayTo" formControlName="PayTo">
+        </div>
+    </div>
+
+    <button (click)="generateReport()" class="btn btn-primary">Generate Report</button> &nbsp;
+    <!-- <button (click)="clear()" class="btn btn-primary">Clear</button> -->
+
+
+</form>

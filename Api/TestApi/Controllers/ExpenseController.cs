@@ -19,13 +19,24 @@ namespace TestApi.Controllers
 
         // GET: api/Expense
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Expense>>> GetExpense()
+        public async Task<ActionResult<IEnumerable<ExpenseDto>>> GetExpense()
         {
           if (_context.Expenses == null)
           {
               return NotFound();
           }
-            return await _context.Expenses.ToListAsync();
+            return await _context.Expenses.Select(i=> new ExpenseDto()
+            {
+                Id = i.Id,
+                ExpenseDate = i.ExpenseDate,
+                IdExpenseElement = i.IdExpenseElement,
+                IdExpenseHead = i.IdExpenseHead,
+                PayTo = i.PayTo,
+                Remarks = i.Remarks,
+                Amount = i.Amount,
+                ExpenseElementName = i.ExpenseElement.Name,
+                ExpenseHeadName = i.ExpenseHead.Name
+            }).ToListAsync();
         }
 
         // GET: api/Expense/5
@@ -49,7 +60,7 @@ namespace TestApi.Controllers
         // PUT: api/Expense/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutExpense(int id, Expense expense)
+        public async Task<IActionResult> PutExpense(int id, [FromBody]Expense expense)
         {
             if (id != expense.Id)
             {
@@ -88,7 +99,7 @@ namespace TestApi.Controllers
           }
             var expense = new Expense()
             {
-                Id = expenseDto.ExId,
+                Id = expenseDto.Id,
                 IdExpenseHead = expenseDto.IdExpenseHead,
                 IdExpenseElement = expenseDto.IdExpenseElement,
                 ExpenseDate = expenseDto.ExpenseDate,

@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "CMw3SBkQYLQQQgU68fxvFZRsM9vbF1TV2hjP565+/0Y=",
+  "Hash": "e6nmIL5y+BFlps5G9E5Fj3Nn0N2L4N5M9XxQ4e5l8Pg=",
   "Source": "TestApi",
   "BasePath": "_content/TestApi",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "E:\\Pets\\CrudApplication V2\\CrudApplication\\Api\\ReportProject\\ReportProject.csproj",
+      "Version": 2,
+      "Source": "ReportProject",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
+    }
+  ],
   "DiscoveryPatterns": [],
   "Assets": []
 }

@@ -58,7 +58,7 @@
 
         <ng-template kendoGridToolbarTemplate>
             <input [style.width.px]="165" placeholder="Search in all columns..." kendoTextBox
-                (input)="onFilter($event)" />
+                (change)="onFilter($event)" />
             <kendo-grid-spacer></kendo-grid-spacer>
             <button kendoGridExcelCommand type="button" icon="file-excel">
                 Export to Excel
@@ -72,9 +72,9 @@
 
         <kendo-grid-column field="Id" title="Expense Id">
         </kendo-grid-column>
-        <kendo-grid-column field="IdExpenseHead" title="Expense Head">
+        <kendo-grid-column field="ExpenseHeadName" title="Expense Head">
         </kendo-grid-column>
-        <kendo-grid-column field="IdExpenseElement" title="Expense Element">
+        <kendo-grid-column field="ExpenseElementName" title="Expense Element">
         </kendo-grid-column>
         <kendo-grid-column field="ExpenseDate" title="Expense Date">
         </kendo-grid-column>
